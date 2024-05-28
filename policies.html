@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Policies</title>
+    <link rel="icon" href="images/logo.jpg" type="image/jpg">
+
+    <style>
+                body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .top-bar {
+            background-color: #00796b;
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .left-links,
+        .right-links {
+            display: flex;
+            align-items: center;
+        }
+
+        .right-links {
+            margin-left: auto;
+        }
+
+        .left-links a,
+        .right-links a,
+        .dropdown span {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        .search-box {
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+        }
+
+        input[type="text"] {
+            padding: 8px;
+            border: none;
+            border-radius: 3px;
+            margin-right: 5px;
+        }
+
+        .search-icon {
+            color: #fff;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            border: 1px solid #fff;
+            border-radius: 5px;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            border: none;
+            border-radius: 0;
+        }
+
+        .lang-item-ta a {
+            color: black;
+        }
+
+        /* Header Styling */
+        .header-wrapper {
+            background-color: #ffffff;
+            padding: 20px 0;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .table-container {
+            overflow-x: auto;
+        }
+        .table-container table {
+            min-width: 600px; /* Adjust as needed */
+        }
+        .site_logo {
+            max-height: 70px; /* Adjust the max-height as needed */
+        }
+
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .site_logo {
+            max-height: 95px;
+            margin-right: 10px;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .site_name_regional {
+            color: #00796b;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .site_name_english {
+            color: #555;
+            font-size: 0.9em;
+        }
+
+        .menu {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .menu a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        .menu a:hover {
+            text-decoration: underline;
+        }
+
+        /* Catalog Details Styling */
+        .catalogdetails {
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+        }
+
+        .catalogdetails h2 {
+            color: #00796b;
+        }
+
+        .catalog_info_desc p {
+            color: #555;
+        }
+
+        /* Table Styling */
+        table.bt {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        table.bt th,
+        table.bt td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        table.bt th {
+            background-color: #00796b;
+            color: #fff;
+        }
+
+        table.bt tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        /* Mining Details Styling */
+        /* Add background color to minedetails */
+.minedetails {
+    background-color: #f2f2f2; /* Choose your desired background color */
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+/* Add background color to container within minedetails */
+ 
+
+
+        .minedetails h3 {
+            color: #00796b;
+        }
+
+        .view-option {
+            cursor: pointer;
+            color: #00796b;
+            border: 1px solid #00796b;
+            padding: 8px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        /* Overlay Styling */
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+            z-index: 2;
+        }
+
+        .overlay-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+            position: relative;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+
+        /* Units Table Styling */
+        .units {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .units th,
+        .units td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        .units th {
+            background-color: #00796b;
+            color: #fff;
+        }
+
+        .units tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .pdf-icon {
+            width: 150px; /* Adjust the size of the PDF icon */
+            height: auto;
+        }
+
+    
+
+    </style>
+</head>
+<body>
+
+    <div class="top-bar">
+        <div class="left-links">
+            <a href="#">தமிழ்நாடு அரசு</a>
+            <a href="#">Government of Tamil Nadu</a>
+        </div>
+
+        <div class="right-links">
+            <div class="dropdown">
+                <span>English</span>
+                <div class="dropdown-content">
+                    <a href="#" onclick="changeLanguage('tamil')" class="lang-item-ta">தமிழ்</a>
+                </div>
+            </div>
+
+            <div class="search-box">
+                <input type="text" placeholder="Search...">
+                <span class="search-icon">&#128269;</span>
+            </div>
+
+            <a href="home.php">SKIP TO MAIN CONTENT</a>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <div class="header-wrapper">
+        <div class="header-container">
+            <div class="logo">
+                <a href="https://theni.nic.in/" title="Go to home" class="emblem" rel="home">
+                    <img class="site_logo"
+                        src="https://cdn.s3waas.gov.in/s39a96876e2f8f3dc4f3cf45f02c61c0c1/uploads/2019/04/2019041536.png"
+                        alt="">
+                    <div class="logo-text">
+                        <strong lang="ta" class="site_name_regional">தேனி மாவட்டம்</strong>
+                        <span class="site_name_english">Theni District</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Menu -->
+    <div class="menu">
+        <a href="">Mining Statistics</a>
+        <a href="#">Infrastructure</a>
+        <a href="#">Enforcement Activities</a>
+        <a href="#">Personnel</a>
+        <a href="#">Downloads</a>
+        <a href="#">Right to Information</a>
+    </div>
+
+        <!-- Banner -->
+        <div class="wrapper banner-wrapper innerBanner">
+            <img src="https://cdn.s3waas.gov.in/s39a96876e2f8f3dc4f3cf45f02c61c0c1/uploads/2018/04/2018040937.jpg" alt="" class="site_logo">
+        </div>
+    
+
+    <div class="container">
+        <h2>Policy Note</h2>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col" style="text-align: center; vertical-align: middle;">Sl no</th>
+                        <th scope="col" style="text-align: center; vertical-align: middle;">Name</th>
+                        <th scope="col" style="text-align: center; vertical-align: middle;">Download (MB)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="text-align: center; vertical-align: middle;">1</td>
+                        <td style="text-align: center; vertical-align: middle;"><a href="pdf/policy-18-19.pdf" target="_blank">Policy Note 2018-2019</a></td>
+                        <td><a href="pdf/policy-18-19.pdf"><img src="images/pdf.jpg" class="pdf-icon" /></a></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center; vertical-align: middle;">2</td>
+                        <td style="text-align: center; vertical-align: middle;"><a href="pdf/policy-19-20.pdf" target="_blank">Policy Note 2019-2020</a></td>
+                        <td><a href="pdf/policy-19-20.pdf"><img src="images/pdf.jpg" class="pdf-icon" /></a></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center; vertical-align: middle;">3</td>
+                        <td style="text-align: center; vertical-align: middle;"><a href="pdf/policy-20-21.pdf" target="_blank">Policy Note 2020-2021</a></td>
+                        <td><a href="pdf/policy-20-21.pdf"><img src="images/pdf.jpg" class="pdf-icon" /></a></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center; vertical-align: middle;">4</td>
+                        <td style="text-align: center; vertical-align: middle;"><a href="pdf/policy-21-22.pdf" target="_blank">Policy Note 2021-2022</a></td>
+                        <td><a href="pdf/policy-21-22.pdf"><img src="images/pdf.jpg" class="pdf-icon" /></a></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center; vertical-align: middle;">5</td>
+                        <td style="text-align: center; vertical-align: middle;"><a href="pdf/policy-22-23.pdf" target="_blank">Policy Note 2022-2023</a></td>
+                        <td><a href="pdf/policy-22-23.pdf"><img src="images/pdf.jpg" class="pdf-icon" /></a></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center; vertical-align: middle;">6</td>
+                        <td style="text-align: center; vertical-align: middle;"><a id="l_Policy2023" href="pdf/policy-23-24.pdf" target="_blank">Policy Note 2022-2023</a></td>
+                        <td><a href="pdf/policy-23-24.pdf"><img src="images/pdf.jpg" class="pdf-icon" /></a></td>
+                    </tr>
+                    <!-- Add more table rows here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        // Check if the user navigated from the homepage
+        const navigatedFromHome = sessionStorage.getItem('navigatedFromHome');
+
+        if (!navigatedFromHome && window.location.pathname !== 'policies.html && policies.html ') {
+            // If not, redirect back to the homepage
+            window.location.href = 'directorate.html';
+        }
+
+        // Set session storage to indicate navigation from the homepage
+        sessionStorage.setItem('navigatedFromHome', true);
+    </script>
+
+
+
+
+</body>
+</html>

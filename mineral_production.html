@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mineral Production</title>
+    <link rel="icon" href="images/logo.jpg" type="image/jpg">
+
+    <style>
+        /* Global styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f1f1f1;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: #fff;
+            transition: background-color 0.3s;
+            font-size: 16px;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+
+<header> 
+    <img src="images/theni.png" style="width:1520px; top: 10px; left: 100px; margin: 3px; "> 
+
+    <h1 style="text-align: center;">GOVERNMENT OF TAMIL NADU</h1> 
+    <h2 style="text-align: center;">Department of Geology and Mines</h2> 
+</header> 
+
+</head>
+<body>
+    <div class="container">
+        <h1>Mineral Production Information</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Mineral Type</th>
+                    <th>Production Quantity (in tons)</th>
+                    <th>Year</th>
+                    <th>Region</th>
+                    <th>Production Value ($)</th>
+                    <th>Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Bauxite</td>
+                    <td>300,000</td>
+                    <td>2023</td>
+                    <td>Southwest</td>
+                    <td>$450,000</td>
+                    <td>Bauxite is a sedimentary rock with a relatively high aluminium content. It is the world's main source of aluminium and gallium.</td>
+                </tr>
+                <tr>
+                    <td>Limestone</td>
+                    <td>800,000</td>
+                    <td>2023</td>
+                    <td>Central</td>
+                    <td>$1,200,000</td>
+                    <td>Limestone is a carbonate sedimentary rock that is often composed of the skeletal fragments of marine organisms such as coral, foraminifera, and molluscs.</td>
+                </tr>
+                <tr>
+                    <td>Gypsum</td>
+                    <td>400,000</td>
+                    <td>2023</td>
+                    <td>Northwest</td>
+                    <td>$600,000</td>
+                    <td>Gypsum is a soft sulfate mineral composed of calcium sulfate dihydrate, with the chemical formula CaSO4·2H2O. It is widely mined and is used as a fertilizer and as the main constituent in many forms of plaster, blackboard/sidewalk chalk, and drywall.</td>
+                </tr>
+                <tr>
+                    <td>Magnesite</td>
+                    <td>150,000</td>
+                    <td>2023</td>
+                    <td>Northeast</td>
+                    <td>$300,000</td>
+                    <td>Magnesite is a mineral with the chemical formula MgCO3 (magnesium carbonate). It is used in the production of magnesium oxide as well as refractory materials.</td>
+                </tr>
+                <tr>
+                    <td>Ilmenite</td>
+                    <td>200,000</td>
+                    <td>2023</td>
+                    <td>East</td>
+                    <td>$400,000</td>
+                    <td>Ilmenite is a titanium-iron oxide mineral with the idealized formula FeTiO3. It is a weakly magnetic black or steel-gray solid. From a commercial perspective, ilmenite is the most important ore of titanium.</td>
+                </tr>
+                <tr>
+                    <td>Soapstone</td>
+                    <td>50,000</td>
+                    <td>2023</td>
+                    <td>West</td>
+                    <td>$100,000</td>
+                    <td>Soapstone is a metamorphic rock composed predominantly of talc. It is soft and is used for carving, as well as in countertops, sinks, and many other applications.</td>
+                </tr>
+                <tr>
+                    <td>Silica Sand</td>
+                    <td>700,000</td>
+                    <td>2023</td>
+                    <td>South</td>
+                    <td>$1,050,000</td>
+                    <td>Silica sand is used for a wide range of applications, from glassmaking to industrial casting, filtration, and more. It is composed of silicon dioxide (SiO2).</td>
+                </tr>
+                <!-- Add more minerals with their details -->
+            </tbody>
+        </table>
+        <button class="btn" onclick="downloadData()">Download Excel</button>
+    </div>
+
+    <script>
+        function downloadData() {
+            // Dummy data for demonstration
+            const data = [
+                ['Mineral Type', 'Production Quantity (in tons)', 'Year', 'Region', 'Production Value ($)', 'Details'],
+                ['Bauxite', '300,000', '2023', 'Southwest', '$450,000', 'Bauxite is a sedimentary rock with a relatively high aluminium content. It is the world\'s main source of aluminium and gallium.'],
+                ['Limestone', '800,000', '2023', 'Central', '$1,200,000', 'Limestone is a carbonate sedimentary rock that is often composed of the skeletal fragments of marine organisms such as coral, foraminifera, and molluscs.'],
+                ['Gypsum', '400,000', '2023', 'Northwest', '$600,000', 'Gypsum is a soft sulfate mineral composed of calcium sulfate dihydrate, with the chemical formula CaSO4·2H2O. It is widely mined and is used as a fertilizer and as the main constituent in many forms of plaster, blackboard/sidewalk chalk, and drywall.'],
+                ['Magnesite', '150,000', '2023', 'Northeast', '$300,000', 'Magnesite is a mineral with the chemical formula MgCO3 (magnesium carbonate). It is used in the production of magnesium oxide as well as refractory materials.'],
+                ['Ilmenite', '200,000', '2023', 'East', '$400,000', 'Ilmenite is a titanium-iron oxide mineral with the idealized formula FeTiO3. It is a weakly magnetic black or steel-gray solid. From a commercial perspective, ilmenite is the most important ore of titanium.'],
+                ['Soapstone', '50,000', '2023', 'West', '$100,000', 'Soapstone is a metamorphic rock composed predominantly of talc. It is soft and is used for carving, as well as in countertops, sinks, and many other applications.'],
+                ['Silica Sand', '700,000', '2023', 'South', '$1,050,000', 'Silica sand is used for a wide range of applications, from glassmaking to industrial casting, filtration, and more. It is composed of silicon dioxide (SiO2).'],
+                // Add more rows for additional minerals with their details
+            ];
+
+            // Create a CSV file
+            const csvContent = "data:text/csv;charset=utf-8," + data.map(row => row.join(",")).join("\n");
+
+            // Create a temporary link element
+            const link = document.createElement("a");
+            link.href = encodeURI(csvContent);
+            link.download = "mineral_production.csv";
+
+            // Trigger the click event to start downloading the file
+            link.click();
+        }
+    </script>
+</body>
+</html>

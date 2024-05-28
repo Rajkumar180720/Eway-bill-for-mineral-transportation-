@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quarry Details Form</title>
+    <link rel="icon" href="images/logo.jpg" type="image/jpg">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('owner.jpg') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 500px;
+            padding: 20px 30px 20px 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        h2 {
+            text-align: center;
+            color: #007BFF;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            padding-bottom: 5px;
+            margin-right: 10px; /* Adjusted margin to add spacing between labels */
+            color: #333;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-group-horizontal {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .form-group-horizontal .form-group {
+            flex: 1;
+            margin-bottom: 10px;
+        }
+
+        button {
+            width: 100%;
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        @media (max-width: 768px) {
+            .form-group-horizontal .form-group {
+                flex: 100%;
+                margin-right: 0;
+            }
+        }
+    </style>
+     </style>
+     <script>
+         function showConfirmation() {
+             alert("Information submitted successfully. Thank you!");
+         }
+     </script>
+</head>
+<body>
+    <div class="container">
+        <h2>Quarry Details Form</h2>
+        <form action="javascript:void(0);" onsubmit="showConfirmation()">
+                        <div class="form-group">
+                <label for="quarry-name">Quarry Name</label>
+                <input type="text" id="quarry-name" name="quarry-name" required>
+            </div>
+            <div class="form-group">
+                <label for="quarry-owner-name">Quarry Owner Name</label>
+                <input type="text" id="quarry-owner-name" name="quarry-owner-name" required>
+            </div>
+            <div class="form-group">
+                <label for="quarry-id">Quarry ID</label>
+                <input type="text" id="quarry-id" name="quarry-id" required>
+            </div>
+            <div class="form-group">
+                <label for="quarry-location">Quarry Location</label>
+                <input type="text" id="quarry-location" name="quarry-location" required>
+            </div>
+            <div class="form-group">
+                <label for="minerals-contained">Minerals Contained in Quarry</label>
+                <input type="text" id="minerals-contained" name="minerals-contained" required>
+            </div>
+            <div class="form-group">
+                <label for="minerals-given">Minerals Given</label>
+                <input type="text" id="minerals-given" name="minerals-given" required>
+            </div>
+            <div class="form-group">
+                <label for="amount-taken">Amounts of Minerals Taken by Vehicle Owner</label>
+                <input type="text" id="amount-taken" name="amount-taken" required>
+            </div>
+            <div class="form-group">
+                <label for="amount-taken">Vehicle id</label>
+                <input type="text" id="amount-taken" name="amount-taken" required>
+            </div>
+            <div class="form-group">
+                <label for="amount-taken">District</label>
+                <input type="text" id="amount-taken" name="amount-taken" required>
+            </div>
+            <div class="form-group">
+                <label for="amount-taken">Taluk</label>
+                <input type="text" id="amount-taken" name="amount-taken" required>
+            </div>
+            <div class="form-group">
+                <label for="amount-taken">Village</label>
+                <input type="text" id="amount-taken" name="amount-taken" required>
+            </div>
+            <div class="form-group">
+                <label for="amount-taken">Permitted Area</label>
+                <input type="text" id="amount-taken" name="amount-taken" required>
+            </div>
+            <div class="form-group">
+                <label for="amount-taken">Survey Number</label>
+                <input type="text" id="amount-taken" name="amount-taken" required>
+            </div>
+            <div class="form-group">
+                <label for="amount-taken">License approved Date</label>
+                <input type="text" id="amount-taken" name="amount-taken" required>
+            </div>
+            <div class="form-group">
+                <label for="amount-taken">Valid Upto</label>
+                <input type="text" id="amount-taken" name="amount-taken" required>
+            </div>
+            
+
+
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

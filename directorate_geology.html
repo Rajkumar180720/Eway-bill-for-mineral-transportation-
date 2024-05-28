@@ -1,0 +1,2965 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Department of Geology</title>
+        <link href="../style/home.css " rel="stylesheet" type="text/css">
+        
+        <script src="../Scripts/jquery-1.4.2.min.js" type="text/javascript"></script>
+        </head>
+    <style>
+        /* Global styles */
+        body {
+	background-Images: url(../Images/bodybg.gif);
+	background-repeat: repeat-x;
+	background-position: left top;
+	background-color: #e9e9e9;
+	margin: 0px;
+	padding: 0px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 20px;
+	font-weight: normal;
+	color: #000;
+	text-decoration: none;
+	background-image: url(../Images/bodybg.jpg);
+}
+#mainarea {
+	width: 942px;
+	margin: auto;
+}
+.clear
+{
+	clear:both;
+	margin:0px;
+	padding:0px;
+}
+#mainarea #Innerheader {
+	padding-top: 0px;
+	height:101px;
+}
+#topRight {
+	float:right;
+	background-image: url(../Images/Nabeenpatnaik1.jpg);
+	background-repeat: no-repeat;
+	background-position: right bottom;
+	height:101px;
+}
+/* Additional CSS for dropdown menus */
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown:hover .submenu {
+    display: block;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+.dropdown a:hover {
+    background-color: #f0f0f0;
+}
+
+.submenu li {
+    white-space: nowrap;
+}
+
+.submenu li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+.submenu li a:hover {
+    background-color: #f0f0f0;
+}
+
+
+.TopLinknew a {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-decoration: none;
+	background-image: url(../Images/tabtop.gif);
+	
+	background-repeat: no-repeat;
+	background-position: left top;
+	text-align: center;
+	display: block;
+	float: left;
+	height: 26px;
+	width: 133px;
+	margin-right: 3px;
+}
+
+.TopLinknew a.current {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-decoration: none;
+	background-image: url(../Images/tabtop.gif);
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	text-align: center;
+	display: block;
+	float: left;
+	height: 26px;
+	width: 133px;
+	margin-right: 3px;
+}
+
+
+.TopLinknew a:hover {
+	
+	background-position: left bottom;
+	
+}
+.TopLinknewst a {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-decoration: none;
+	background-image: url(../Images/tabtop.gif);
+	background-repeat: no-repeat;
+	background-position: left top;
+	text-align: center;
+	display: block;
+	float: right;
+	height: 26px;
+	width: 133px;
+	margin-right: 3px;
+}
+
+.TopLinknewst a.current {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-decoration: none;
+	background-image: url(../Images/tabtop.gif);
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	text-align: center;
+	display: block;
+	float: right;
+	height: 26px;
+	width: 133px;
+	margin-right: 3px;
+}
+
+
+.TopLinknewst a:hover {
+	
+	background-position: left bottom;
+	
+}
+
+
+
+.TopLink {
+	
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	text-decoration: none;
+	height:18px;
+	margin-top:4px;
+	margin-bottom:0px;
+	color:#000;
+	text-align:right;
+	padding:0px;
+}
+.TopLink a {
+	text-decoration: none;
+	color: #000;
+	padding-left:5px;
+	padding-right:5px;
+	font-size:11px;
+	margin:0px;
+	padding:0px;
+}
+.TopLink a:hover {
+	text-decoration: underline;
+	
+}
+#topRight .profile {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #000000;
+	text-decoration: none;
+	float:right;
+	line-height:17px;
+	width:185px;
+}
+
+#topRight .profile .Search {
+	float:left;
+	margin-top:29px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	color: #000;
+	text-decoration: none;
+	background-color: #fef5d6;
+	border: 2px solid #cba224;
+	height:20px;
+}
+#topRight .profile .button {
+	float:left;
+	margin-top:27px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	color: #FFF;
+	text-decoration: none;
+	background-image: url(../Images/searchBG.jpg);
+	background-repeat: no-repeat;
+	background-position: left top;
+	height: 27px;
+	width: 59px;
+	border:0px;
+}
+#menu{
+	margin-top: 3px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	
+}
+#menu  ul{
+	margin: 0;
+	padding: 0;
+	height:49px;
+}
+#menu  ul li{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	float:left;
+	background-image: url(../Images/whiteLine.jpg);
+	background-repeat: no-repeat;
+	background-position: right;
+	
+}
+#menu  ul li a{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	color: #FFF;
+	text-decoration: none;
+	padding-top: 10px;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin: 0px;
+	height: 34px;
+	display:block;
+	float:left;
+}
+
+#menu  ul li a:hover{
+	color: #f8d927;
+	
+}
+
+
+#menu  ul li span{
+	color: #000;
+	background-color: #FFF;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	text-decoration: none;
+	padding-top: 11px;
+	padding-right: 19px;
+	padding-left: 15px;
+	height: 34px;
+	margin-top: 5px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	display: block;
+	float: left;
+}
+#whiteBg{
+	background-color: #FFF;
+	padding-bottom:10px;
+	}
+#contArea{
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 10px;
+	padding-left: 7px;
+	margin: 0px;
+	}
+	
+#contArea h1 {
+	font-family: "Century Gothic";
+	font-size: 15px;
+	font-weight: bold;
+	color: #000000;
+	text-decoration: none;
+	padding: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 10px;
+	margin-left: 0px;
+}
+
+	
+	
+#whiteBg #LeftPanel{
+	float:left;
+	width:228px;
+	margin-bottom:5px;
+	}
+#whiteBg #LeftPanel #LoginMiddleBG{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	color: #000;
+	text-decoration: none;
+	background-image: url(../Images/I3msbg.gif);
+	background-repeat: no-repeat;
+	background-position: left top;
+	background-color:#FFCC33;*/
+	padding-top: 0px;
+	padding-right: 5px;
+	padding-bottom: 0px;
+	padding-left: 15px;
+	margin: 0px;
+	height: 108px;
+	line-height:17px;
+	}
+#whiteBg #LeftPanel #LoginMiddleBG strong{
+	font-size: 17px;
+	padding-top:10px;
+	display:block;
+	padding-bottom:5px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	
+	}
+#whiteBg #LeftPanel #LoginMiddleBG strong a{
+	color:#fff;
+	text-decoration:none;
+	font-size: 17px;
+
+}
+	
+#whiteBg #LeftPanel #LoginMiddleBG strong a:hover{
+
+text-decoration:underline;
+
+}	
+/*Yellow Box*/
+.YellowBox{
+		margin-top:5px;
+		margin-bottom:5px;
+	}
+	
+.YellowBox .yelarrow {
+	background-image: url(../Images/greenmorearrow.gif);
+	background-repeat: no-repeat;
+	background-position: left top;
+	height: 25px; 
+	width: 23px;
+	display: block;
+	float: right;
+	margin-right:15px;
+	
+}
+	
+.YellowBox .header{
+	font-family: "Century Gothic";
+	font-size: 15px;
+	font-weight: bold;
+	color: #000;
+	text-decoration: none;
+	background-image: url(../Images/YellowBG.jpg);
+	background-repeat: no-repeat;
+	background-position: left top;
+	padding-top: 10px;
+	padding-Bottom: 10px;
+	padding-left: 10px;
+	margin:0px;
+	height:22px;
+	}
+.YellowBox .yellowBg{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #000;
+	text-decoration: none;
+	background-image: url(../Images/YellowMiddleBG.jpg);
+	background-repeat: repeat-y;
+	background-position: left top;	
+	margin-top:0px;
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:4px;
+	padding-bottom:0px;
+	}
+	
+.YellowBox .lnk {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	color: #000000;
+	text-decoration: none;
+	background-image: url(../Images/orangebullet.jpg);
+	background-position: left;
+	display: block;
+	margin-left: 3px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	background-repeat: no-repeat;
+	padding-left: 10px;
+}
+
+
+.YellowBox .lnk:hover {
+color:#C0A505;
+}
+	
+.YellowBox .yellowBg #map{
+	background-image: url(../Images/india-OrissaMap.jpg);
+	background-repeat: no-repeat;
+	background-position: right top;
+	height: 105px;
+	line-height: 21px;
+	}
+#map .redtxt{
+	color: #F00;
+	text-decoration: none;
+	
+	}
+	
+#map .redtxt:hover{
+	color: #000;
+	text-decoration: none;
+	
+	}
+/*Green Box*/
+.GreenBox{
+	margin:0px;
+	}
+.GreenBox .header{
+	font-family: "Century Gothic";
+	font-size: 15px;
+	font-weight: bold;
+	color: #000;
+	text-decoration: none;
+	background-image: url(../Images/GreenBG.jpg);
+	background-repeat: no-repeat;
+	background-position: left top;
+	padding-top: 10px;
+	padding-Bottom: 0px;
+	padding-left: 10px;
+	margin:0px;
+	height:32px;
+	}
+.GreenBox .header a{
+	background-image: url(../Images/GreenArrow.jpg);
+	background-repeat: no-repeat;
+	background-position: right;
+	height: 30px;
+	width: 27px;
+	float: right;
+	margin-right:10px;
+	display: block;
+	}
+.GreenBox .GreenBg{
+	background-image: url(../Images/GreenMiddleBG.jpg);
+	background-repeat: repeat-y;
+	background-position: left top;
+	margin:0px;	
+	padding-left:7px;
+	padding-right:10px;
+	padding-top:8px;
+	padding-bottom:0px;
+	}
+	
+.GreenBox .mineralbg{
+	background-image: url(../Images/GreenMiddleBG.jpg);
+	background-repeat: repeat-y;
+	background-position: left top;	
+	margin-top:0px;
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:3px;
+	padding-bottom:0px; 
+	}
+	
+.GreenBox .mineralbg a {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	color: #000;
+	text-decoration: none;
+	background-image: url(../Images/GreenCircle.jpg);
+	background-position: left;
+	padding-left: 15px;
+	background-repeat: no-repeat;
+	display: block;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+.GreenBox .mineralbg a:hover {
+	color:#009300;
+}
+	
+.GreenBox .GreenBg ul{
+	margin:0px;
+	padding:0px;
+	}
+.GreenBox .GreenBg ul li{
+	margin:0px;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-top-color: #FFF;
+	border-bottom-color: #e5edc7;
+	list-style-type: none;
+	padding-top: 4px;
+	padding-right: 0px;
+	padding-bottom:4px;
+	padding-left: 0px;
+	}
+.GreenBox .GreenBg ul li a{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	color: #000;
+	text-decoration: none;
+	background-image: url(../Images/GreenCircle.jpg);
+	background-position: left;
+	padding-left: 15px;
+	background-repeat: no-repeat;
+	}
+.GreenBox .GreenBg ul li a:hover{
+	color: #73a618;
+	text-decoration: none;
+	}
+
+/*Gray Box*/
+.GrayBox{
+		margin-top:10px;
+	}
+.GrayBox .header{
+	font-family: "Century Gothic";
+	font-size: 15px;
+	font-weight: bold;
+	color: #000;
+	text-decoration: none;
+	background-image: url(../Images/GrayBg.jpg);
+	background-repeat: no-repeat;
+	background-position: left top;
+	padding-top: 10px;
+	padding-Bottom: 10px;
+	padding-left: 10px;
+	margin:0px;
+	height:22px;
+	}
+	
+.GrayBox .header a {
+	background-image: url(../Images/reportarrow.jpg);
+	background-repeat: no-repeat;
+	background-position: right top;
+	display: block;
+	padding: 0px;
+	float: right;
+	height: 25px;
+	width: 23px;
+	margin-top: 0px;
+	margin-right: 15px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+}
+
+.GrayBox .GrayBg{
+	background-image: url(../Images/GrayMiddleBG.jpg);
+	background-repeat: repeat-y;
+	background-position: left top;	
+	margin-top:0px;
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:8px;
+	padding-bottom:0px;
+	}
+.GrayBox .GrayBg ul{
+	margin:0px;
+	padding:0px;
+	}
+.GrayBox .GrayBg ul li{
+	margin:0px;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-top-color: #FFF;
+	border-bottom-color: #c9d0da;
+	list-style-type: none;
+	padding-top: 3px;
+	padding-right: 0px;
+	padding-bottom:3px;
+	padding-left: 0px;
+	}
+.GrayBox .GrayBg ul li a{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	color: #000;
+	text-decoration: none;
+	background-image: url(../Images/GrayCircle.jpg);
+	background-position: left;
+	padding-left: 15px;
+	background-repeat: no-repeat;
+	}
+.GrayBox .GrayBg ul li a:hover{
+	color: #416A9C;
+	text-decoration: none;
+	}
+	
+	
+
+.GrayBox .Greenmenu{
+	background-image: url(../Images/ltgreenmid.gif);
+	background-repeat: repeat-y;
+	background-position: left top;
+	margin-top:0px;
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:8px;
+	padding-bottom:0px;
+	}
+.GrayBox .Greenmenu ul{
+	margin:0px;
+	padding:0px;
+	}
+.GrayBox .Greenmenu ul li{
+	margin:0px;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-top-color: #FFF;
+	border-bottom-color: #e5edc7;
+	list-style-type: none;
+	padding-top: 4px;
+	padding-right: 0px;
+	padding-bottom:4px;
+	padding-left: 0px;
+	}
+.GrayBox .Greenmenu ul li a{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	color: #000;
+	text-decoration: none;
+	background-image: url(../Images/GreenSquareIcon.gif);
+	background-position: left 1px;
+	padding-left: 15px;
+	background-repeat: no-repeat;
+	}
+.GrayBox .Greenmenu ul li a:hover{
+	color: #416A9C;
+	text-decoration: none;
+	}
+
+	
+
+/*News Box*/
+.NewsBox{
+		margin:0px;
+	}
+.NewsBox .yelarrow {
+	background-image: url(../Images/yelar.gif);
+	background-repeat: no-repeat;
+	background-position: left top;
+	height: 25px; 
+	width: 23px;
+	display: block;
+	float: right;
+	margin-right:15px;
+	
+}	
+.NewsBox .header{
+	font-family: "Century Gothic";
+	font-size: 15px;
+	font-weight: bold;
+	color: #000;
+	text-decoration: none;
+	background-image: url(../Images/NewsBg.jpg);
+	background-repeat: no-repeat;
+	background-position: -3px top;
+	padding-top: 10px;
+	padding-Bottom: 0px;
+	padding-left: 10px;
+	margin:0px;
+	height:33px;
+	}
+.NewsBox .header a{
+	background-image: url(../Images/YellowArrow.jpg);
+	background-repeat: no-repeat;
+	background-position: right top;
+	height: 30px;
+	width: 27px;
+	float: right;
+	margin-right:10px;
+	}
+.NewsBox .NewsBg{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	color: #383838;
+	text-align:justify;
+	text-decoration: none;
+	margin:0px;
+	padding-left:5px;
+	padding-right:5px;
+	padding-top:5px;
+	padding-bottom:10px;
+	background-color: #fcf8e5;
+	line-height:19px;
+	}
+.NewsBox .NewsBg ul{
+	margin:0px;
+	padding:0px;
+	}
+.NewsBox .NewsBg ul li{
+	margin:0px;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #FFF;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #f6e8a2;
+	list-style-type: none;
+	padding-top: 1px;
+	padding-right: 0px;
+	padding-bottom:1px;
+	padding-left: 0px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	color: #FF0000;
+	text-decoration: none;
+	}
+.NewsBox .NewsBg ul li a{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	color: #000000;
+	text-decoration: none;
+	
+	}
+.NewsBox .NewsBg ul li a:hover{
+	color: #C0A505;
+	text-decoration: none;
+	}
+
+/*Green Box*/
+.grayPanelmid{
+	padding-right: 10px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+	padding-top:5px;
+	margin-top: 0px;
+	background-image: url(../Images/greenpanmid.jpg);
+	background-repeat: repeat-x;
+	background-position: left top;
+	background-color: #d7e9b3;
+}
+
+.grayPanelmid .panel {
+	float: left;
+	width: 217px;
+	margin-right: 5px;
+	padding-right: 5px;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #BBD988;
+}
+
+.panel h1 {
+	font-family: "Century Gothic";
+	font-size: 15px;
+	font-weight: bold;
+	color: #000000;
+	text-decoration: none;
+	margin: 0px;
+	padding-top: 5px;
+	padding-right: 0px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #BBD988;
+	height: 27px; 
+}
+
+.panel h1 a {
+	background-image: url(../Images/greenmorarrow.jpg);
+	background-repeat: no-repeat;
+	background-position: right top;
+	display: block;
+	margin: 0px;
+	padding: 0px;
+	float: right;
+	height: 25px;
+	width: 23px; 
+	
+}
+
+
+.grayPanelmid .panelgeo {
+	float: left;
+	width: 217px;
+	margin-right: 6px;
+	padding-right: 6px;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #BBD988;
+}
+
+.panelgeo h1 {
+	font-family: "Century Gothic";
+	font-size: 15px;
+	font-weight: bold;
+	color: #000000;
+	text-decoration: none;
+	margin: 0px;
+	padding-top: 5px;
+	padding-right: 0px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #BBD988;
+	display:block;	
+}
+
+.panelgeo h1 a {
+	background-image: url(../Images/greenmorarrow.jpg);
+	background-repeat: no-repeat;
+	background-position: right top;
+	display: block;
+	margin: 0px;
+	padding: 0px;
+	float: right;
+	height: 25px;
+	width: 23px; 
+	
+}
+
+
+.grayPanelmid1{
+	background-color: #eeeeef;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    padding-top: 5px;
+    margin-top: 0px;
+    min-height: 305px;
+    /* float: left; */
+    margin-bottom: 10px;
+}
+
+
+.grayPanelmid1 .panelgeo1 {
+	float: left;
+	width: 290px;
+	margin-right: 6px;
+	padding-right: 6px;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #d5d5d5;
+	
+	
+}
+
+.panelgeo1 h1 {
+	font-family: "Century Gothic";
+	font-size: 15px;
+	font-weight: bold;
+	color: #000000;
+	text-decoration: none;
+	margin: 0px;
+	padding-top: 5px;
+	padding-right: 0px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #d5d5d5;
+	display:block;	
+}
+
+.panelgeo1 h1 a {
+	background-image: url(../Images/greenmorarrow.jpg);
+	background-repeat: no-repeat;
+	background-position: right top;
+	display: block;
+	margin: 0px;
+	padding: 0px;
+	float: right;
+	height: 25px;
+	width: 23px; 
+	
+}
+
+
+
+
+.lnks a {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	color: #000000;
+	text-decoration: none;
+	background-image: url(../Images/GreenCircle.jpg);
+	background-repeat: no-repeat;
+	background-position: 5px 9px;
+	display: block;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	padding-left: 20px;
+}
+
+.lnks a:hover {
+	color: #090;
+}
+
+
+.lnksblue a {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	color: #000000;
+	text-decoration: none;
+	background-image: url(../Images/bluebullet.gif);
+	background-repeat: no-repeat;
+	background-position: 5px 9px;
+	display: block;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	padding-left: 20px;
+	height:20px;
+}
+
+.lnksblue a:hover {
+	color: #385B87;
+}
+
+#whiteBg #LeftPanel #LoginMiddleBG .knowMore{
+	font-size: 12px;
+	padding-top:10px;
+	padding-bottom:10px;
+	color: #000;
+	text-decoration: underline;
+	text-align: right;
+	margin-right:15px;
+	margin-top: 0px;
+	font-weight: bold;
+	display: block;
+	}
+	
+#whiteBg #LeftPanel #LoginMiddleBG .knowMore:hover {
+text-decoration: none;}
+	
+#whiteBg #RightPanel{
+	float:left;
+	margin-left:5px;
+	
+	}
+#whiteBg #RightPanel #banner{
+	margin-bottom:5px;
+	}
+
+#whiteBg #RightPanel #dept{
+	width:444px;
+	margin-right:10px;
+	float:left;
+	background-color: #eff0f1;
+	margin-bottom: 5px;	
+	}
+.Content
+{
+	padding-top: 5px;
+	padding-right: 12px;
+	padding-bottom: 5px;
+	padding-left: 12px;
+}
+
+.Content h1 a {
+background-image: url(../Images/bluearrownew.gif);
+	background-repeat: no-repeat;
+	background-position: right top;
+	display: block;
+	margin: 0px;
+	padding: 0px;
+	float: right;
+	height: 25px;
+	width: 23px; 
+}
+.blackbold {
+	font-family: "Century Gothic";
+	font-size: 15px;
+	font-weight: bold;
+	color: #000000;
+	text-decoration: none;
+	line-height:17px;
+}
+
+#whiteBg #RightPanel #dept h1{
+	font-family: "Century Gothic";
+	font-size: 15px;
+	font-weight: bold;
+	color: #000;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #b9c2cf;
+	margin: 0px;
+	padding: 0px;
+	height: 28px;
+	}
+#whiteBg #RightPanel #news{
+	float: left;
+	width:239px;
+	margin:0px;
+	padding:0px;
+	}
+#Newsbox {
+	float:left;
+	width:220px;
+	background-color:#33CCFF;
+	height:200px;
+}
+
+#footerArea {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	line-height: 18px;
+	font-weight: normal;
+	color: #FFFFFF;
+	text-decoration: none;
+	height: 50px;
+	background-color: #3e540b;
+	padding-top: 10px;
+	padding-bottom: 15px;
+}
+
+#footerArea .Footer {
+	margin: auto;
+	width: 942px;
+}
+
+.Footer a {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	line-height: 18px;
+	font-weight: normal;
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+
+.Footer a:hover {
+	text-decoration: none;
+}
+.date{
+	color: #F00;	
+	}
+	
+.Panel3 {
+	margin-top: 5px;
+}
+
+.Pan4{
+	margin-top: 10px;
+}
+
+.pan4left {
+width:350px;
+float:left;
+margin-right:10px;
+margin-bottom:8px;
+padding:0px;
+
+}
+
+.Pan4 h2 {
+	font-family: "Century Gothic";
+	font-size: 15px;
+	font-weight: bold;
+	color: #000;
+	text-decoration: none;
+	background-image: url(../Images/keyinitiative.jpg);
+	background-repeat: no-repeat;
+	background-position: left top;
+	padding-top: 4px;
+	padding-Bottom: 0px;
+	padding-left: 10px;
+	margin:0px;
+	height:23px;
+	border-bottom-width: 3px;
+	border-bottom-style: solid;
+	border-bottom-color: #f8d927;
+} 
+
+.pan4left .inilnk {
+	float: left;
+	margin-right: 0px;
+	margin-top:7px;
+	margin-bottom:4px;
+	}
+
+.inilnk a {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #000000;
+	text-decoration: none;
+	margin: auto;
+	width: 160px;
+	display:block;
+	text-align: center;
+	background-color: #D8DFE5;
+	float:left;
+	padding-top: 3px;
+	padding-right: 2px;
+	padding-bottom: 2px;
+	padding-left: 2px;
+}
+
+.inilnk a:hover {
+	color: #FFF;
+	text-decoration:none;
+	background-color: #5776AC;
+}
+
+.pan4left .imgborder {
+	border: 2px solid #FFFFFF;
+}
+
+.Pan4 .pan4right {
+	float: left;
+	width: 330px;
+}
+.VideoGallery{
+	border: 2px solid #f8d927;
+	padding:3px;
+	margin-bottom:3px;
+	margin-top:3px;
+	background-color:#eff4de;
+	}
+
+.VideoMore {
+	background-image: url(../Images/videobg.gif);
+	background-repeat: no-repeat;
+	background-position: left top;
+	height: 160px;
+	width: 138px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #000066;
+	text-decoration: none;
+	float:right;
+	width:120px;
+	height:40px;
+	padding-top:120px;
+	padding-left:9px;
+	padding-right:9px;
+}
+.VideoMore a {
+	color: #0099CC;
+	text-decoration: none;
+}
+.VideoMore a:hover {
+	color: #990000;
+	text-decoration: none;
+}
+
+/*.gallery {
+	padding: 3px;
+	border: 2px solid #f8d927;
+	background-image: url(../Images/photo.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	height: 216px;
+}
+
+.gallery .caption {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #FFFFFF;
+	margin-top: 160px;
+	padding-left: 10px;
+}
+
+.gallery a {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #f8d927;
+	text-decoration: none;
+	background-image: url(../Images/yelarrow.jpg);
+	background-repeat: no-repeat;
+	background-position: right;
+	margin-right: 10px;
+	padding-right: 10px;
+	display: block;
+	float: right;
+	margin-top: 10px;
+}
+
+.gallery a:hover {
+color: #FFFFFF;}*/
+
+.gallery {
+	background-color: #eff4de;
+	border: 1px solid #b3bc95;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #000066;
+	text-decoration: none;
+	padding-top: 4px;
+	padding-right: 7px;
+	padding-bottom: 4px;
+	padding-left: 7px;
+}
+
+.pan5 {
+margin-top: 0px;
+}
+
+.pan5 .pan5right {
+	float: left;
+	width: 460px;
+}
+.pan5 h2 {
+	font-family: "Century Gothic";
+	font-size: 15px;
+	font-weight: bold;
+	color: #000;
+	text-decoration: none;
+	background-image: url(../Images/keyinitiative.jpg);
+	background-repeat: no-repeat;
+	background-position: left top;
+	padding-top: 4px;
+	padding-Bottom: 0px;
+	padding-left: 10px;
+	padding-right:1px;
+	margin:0px;
+	height:23px;
+	border-bottom-width: 3px;
+	border-bottom-style: solid;
+	border-bottom-color: #f8d927;
+} 
+
+.border {
+	border: 1px solid #CCCCCC;
+}
+
+.border:hover {
+	border: 1px solid #999999;
+}
+
+#InnerContArea {
+float:left;
+width:686px;
+margin-left:5px;
+
+}
+
+#InnerContArea .innerbanner { 
+margin-bottom:10px;
+} 
+
+.navigation {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	color: #000000;
+	text-decoration: none;
+	margin-bottom: 10px;
+	padding: 5px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #7186a3;
+	margin-left:0px;
+	background-color: #eff0f2;
+}
+
+.navigation a {
+	color: #000;
+	text-decoration:none;
+	font-weight:bold;
+	background-color: #bac4d0;
+	padding-top: 3px;
+	padding-right: 7px;
+	padding-bottom: 3px;
+	padding-left: 7px;
+}
+.navigation span {
+	color: #000;
+	text-decoration:none;
+	font-weight:bold;
+	padding-top: 3px;
+	padding-right: 7px;
+	padding-bottom: 3px;
+	padding-left: 7px;
+	background-color: #bac4d0;
+}
+
+#InnerContArea .navigation a:hover {
+color: #000000;
+text-decoration:none;
+}
+
+#InnerContArea h1 {
+	font-family: "Century Gothic";
+	font-size: 15px;
+	font-weight: bold;
+	color: #000000;
+	text-decoration: none;
+	padding: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 10px;
+	margin-left: 0px;
+}
+
+.botdotted table {
+	margin-top: 10px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-top-style: dotted;
+	border-right-style: dotted;
+	border-top-color: #B9B9B9;
+	border-right-color: #B9B9B9;
+}
+
+.botdotted table td {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-right: 5px;
+	padding-left: 5px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-bottom-style: dotted;
+	border-left-style: dotted;
+	border-bottom-color: #B9B9B9;
+	border-left-color: #B9B9B9;
+}
+
+.botdotted table td a {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #000000;
+	text-decoration: none;
+}
+
+.botdotted table td a:hover {
+	color: #FF0000;
+	
+}
+
+.blkboldtxt {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	color: #000000;
+	text-decoration: none;
+}
+
+.numbering {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	color: #FF0000;
+	text-decoration: none;
+}
+
+.reportlftmenu {
+	border-right-width: 2px;
+	border-right-style: solid;
+	border-right-color: #CCCCCC;	
+	width:185px;
+	padding-left:10px;
+}
+
+.reportlftmenu a {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #000000;
+	text-decoration: none;
+	display: block;
+	padding-left: 10px;
+	height: 25px;
+	width: 170px;
+	padding-top: 3px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #CCCCCC;
+	margin: 0px;
+	background-image: url(../Images/arrownew.gif);
+	background-repeat: no-repeat;
+	background-position: left;
+}
+
+.reportlftmenu a:hover {
+	background-repeat: no-repeat;
+	background-position: left top;
+	color: #FFFFFF;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	height: 25px;
+	padding-top: 4px;
+	background-image: url(../Images/arrownav.gif);
+}
+
+.reportlftmenu a.active {
+	background-repeat: no-repeat;
+	background-position: left top;
+	color: #FFFFFF;
+	border-bottom-width: 0px;
+	background-image: url(../Images/arrownav.gif);
+	height: 25px;
+	padding-top: 4px; 
+}
+
+
+.reportlftmenu a:hover {
+	background-color: #F4F4F4;	
+}
+
+.sqbrdr {
+	padding: 3px;
+	border: 1px solid #CCCCCC;
+}
+
+.viewTable table{
+	color:#000000;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-top-color: #ACB9CA;
+	border-right-color: #ACB9CA;
+	font-family: 'Arial', Helvetica, sans-serif;
+	font-size: 12px;
+	background-color: #FFFFFF;
+	font-weight: normal;
+}
+
+.viewTable td {
+	padding:4px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-bottom-color: #ACB9CA;
+	border-left-color: #ACB9CA;
+}
+.viewTable th {
+	padding:4px;
+	color:#000;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-bottom-color: #ACB9CA;
+	border-left-color: #ACB9CA;
+	text-align:left;
+	background-color: #DBE0E6;
+	font-size:11px;
+}
+.viewTable table td a:link, .viewTable table td a:visited{
+	color:#FF0000;
+	text-decoration:none;
+	font-weight: normal;
+	font-size: 12px;
+}
+.viewTable table td a:hover{
+                color:#000000;
+                text-decoration:underline;
+                
+}
+
+.ListInner {
+	padding:0px;
+	margin:0px;
+	
+}
+.ListInner ul {
+	padding:0px;
+	margin-top:0px;
+}
+.ListInner ul li {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #023e60;
+	text-decoration: none;
+	background-image: url(../Images/tickIcon.gif);
+	background-repeat: no-repeat;
+	background-position: left 10px;
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	padding-left: 20px;
+	list-style-type: none;
+}
+.ListInner ul li a {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #023e60;
+	text-decoration: none;
+}
+.ListInner ul li a:hover {
+	text-decoration:none;
+	color:#330000;
+}
+.ListInner ul li ul {
+	padding:0px;
+	list-style-type: none;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 15px;
+}
+.ListInner ul li ul li {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #023e60;
+	text-decoration: none;
+	background-Images: none;
+	list-style-type: disc;
+	background-image:none;
+	margin: 0px;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 5px;
+}
+.ListInner ul li ul li a {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #023e60;
+	text-decoration: none;
+}
+.ListInner ul li ul li a:hover {
+	text-decoration:none;
+	color:#330000;
+}
+.backbutton{
+	float:right;
+	width:120px;
+	}
+.back{
+	height: 27px;
+	width: 49px;
+	display: block;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #FF0000;
+	text-decoration: none;
+	float:left;
+	margin-left:0px;
+	background-image: url(../Images/back.gif);
+	background-repeat: no-repeat;
+	background-position: left top;
+	
+}
+.back:hover {
+	color: #000000;
+	text-decoration: none;
+	background-image: url(../Images/back.gif);
+	background-repeat: no-repeat;
+	background-position: left bottom;
+}
+.Next{
+	height: 27px;
+	width: 49px;
+	display: block;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #FF0000;
+	text-decoration: none;
+	float:right;
+	margin-left:0px;
+	background-image: url(../Images/Next.gif);
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.Next:hover {
+	color: #000000;
+	text-decoration: none;
+	background-image: url(../Images/Next.gif);
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	
+}
+
+.greenborder {
+	border: 2px solid #cbdb95;
+}
+
+.greenlnk  {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #000000;
+	text-decoration: none;
+	display: block;
+	padding-top: 2px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+}
+
+.greenlnk:hover {
+	color: #73a618;
+}
+.input{
+	color: #000;
+	background-color: #F5F5F5;
+	border: 1px solid #999;
+	font-weight: normal;
+	}
+.submit {
+	float:left;
+	margin-top:0px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	color: #FFF;
+	text-decoration: none;
+	background-image: url(../Images/submitBg.jpg);
+	background-repeat: no-repeat;
+	background-position: left top;
+	height: 26px;
+	width: 57px;
+	border:0px;
+}
+.greenTxt{
+	font-weight: bold;
+	color: #090;
+	text-decoration: none;
+	padding-top:5px;
+	padding-bottom:5px;
+	}
+.pageconst{
+	font-weight: bold;
+	color: #999;
+	text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:18px;	
+}
+.Unpageconst{
+	font-weight: bold;
+	color: #a0a0a0;
+	text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:21px;
+	text-align:center;
+}
+.blueTxt{
+	font-weight: bold;
+	color: #0057AE;
+	text-decoration: none;
+	padding-top:5px;
+	padding-bottom:5px;
+	font-size:13px;
+	}
+.InnerContent {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	font-weight:normal;
+	color:#000000;
+	text-decoration:none;
+	line-height:20px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+.InnerContent a {
+	color: #660000;
+	text-decoration:none;
+}
+.InnerContent a:hover {
+	color: #0066CC;
+	text-decoration:none;
+}
+.InnerContent ul {
+	margin:0px;
+	padding-left:12px;
+	padding-bottom:2px;
+	padding-top:5px;
+	padding-right:0px;
+}
+.InnerContent ul li {
+	margin:0px;
+	padding-left:20px;
+	padding-top:3px;
+	padding-bottom:3px;
+	text-decoration:none;
+	list-style:none;
+	background-image:url(../Images/tick.gif);
+	background-repeat:no-repeat;
+	background-position:left 5px;
+}
+.InnerContent ul li ul {
+	margin:0px;
+	padding:0px;
+}
+.InnerContent ul li ul li {
+	margin:0px;
+	padding-left:15px;
+	padding-top:2px;
+	padding-bottom:2px;
+	text-decoration:none;
+	list-style:none;
+	background-image:url(../Images/bluebullet.gif);
+	background-repeat:no-repeat;
+	background-position:left 10px;
+}
+.InnerContent ul li ul li strong {
+	color:#ccc;
+	text-decoration:none;
+	font-weight:bold;
+}
+
+.greybgmid {
+	background-image: url(../Images/greybgmid.gif);
+	background-repeat: repeat-y;
+	background-position: left top;
+	padding-top: 0px;
+	padding-right: 10px;
+	padding-bottom: 0px;
+	padding-left: 10px;
+	}
+	
+.yelpan {
+	background-image: url(../Images/yelpanmid.gif);
+	background-repeat: repeat-y;
+	background-position: left top;
+	padding-top: 0px;
+	padding-right: 10px;
+	padding-bottom: 0px;
+	padding-left: 10px;
+	}
+	
+.anylinkcss{
+	position:absolute;
+	visibility: hidden;
+	line-height: 22px;
+	z-index: 100;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-decoration: none;
+	
+}
+
+.anylinkcss a{
+	color: #FFF;
+	width: 100%;
+	display: block;
+	text-indent: 3px;
+	text-decoration: none;
+	font-weight: normal;
+	text-indent: 5px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	background-color: #3e540b;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #ebf3d2;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #FFF;
+	padding-top: 3px;
+	padding-right: 0;
+	
+}
+
+.anylinkcss a:hover{ /*hover background color*/
+background-color: #dae1e7;
+color: #000;
+
+}
+
+.greenline {
+	background-color: #3e540b;
+	height: 5px;
+	}
+#button {
+	float:right;
+}
+#button ul {
+	margin: 0px;
+	padding: 0px;
+}
+#button li {
+	list-style: none;
+	float:left;
+}
+
+#button a {
+	display: block;
+	margin-right: 2px;
+	text-decoration: none;
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:12px;
+	font-weight: bold;
+	color: #FFF;
+	padding-top: 2px;
+	padding-right: 10px;
+	padding-bottom: 2px;
+	padding-left: 10px;
+	background-color: #3E540B;
+	border: 1px solid #293807;
+}
+
+#button a:hover{
+	text-decoration:none;
+	color: #000;
+	background-color: #E3B32B;
+	border: 1px solid #987816;
+}
+#button .active a {
+	color:#000;
+	background-color: #E3B32B;
+	border: 1px solid #987816;
+}
+.subHeder {
+	font-weight: bold;
+	color: #3E540B;
+}
+.img{
+	padding: 1px;
+	border: 1px solid #CCC;
+	}
+	
+.GrayBox .geomenu{
+	background-image: url(../Images/ltgreenmid.gif);
+	background-repeat: repeat-y;
+	background-position: left top;
+	margin-top:0px;
+	padding-left:1px;
+	padding-right:3px;
+	padding-top:8px;
+	padding-bottom:0px;
+	}
+#loginBg{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #000;
+	text-decoration: none;
+	background-image: url(../Images/LoginMiddleCurve.jpg);
+	background-repeat: repeat-y;
+	background-position: right top;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	margin: 0px;
+	padding-right: 10px;
+	padding-left: 10px;
+	}
+#loginBg strong{
+		font-size: 15px;
+		padding-top:10px;
+		display:block;
+		padding-bottom:10px;
+	}
+#loginBg strong a{
+	color:#3E540B;
+	text-decoration:none;
+	font-size: 17px;
+
+}
+	
+#loginBg strong a:hover{
+
+text-decoration:underline;
+
+}
+
+.knowMorenew{
+	font-size: 11px;
+	padding-top:10px;
+	padding-bottom:10px;
+	color: #F00;
+	text-decoration: none;
+	text-align: right;
+	margin-left:80px;
+	}
+
+.knowMorenew:hover {
+color:#000000;}
+
+#deptmines{
+	width:458px;
+	margin-right:10px;
+	float:left;
+	
+	margin-bottom: 5px;	
+	}
+.pagingnormal {
+	float:right;
+	width:240px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	color: #000000;
+	text-decoration: none;
+	text-align:right;
+}
+
+/*.pagingnormal a{
+	color: #FF0000;
+	text-decoration: none;
+	margin-left:5px;
+}
+.pagingnormal a:hover {
+	color: #000000;
+	text-decoration: none;
+	
+} */
+.pagingnormal span {
+	text-decoration:none;
+	color:#FF0000;
+}
+.profileMinister {
+	margin:0px;
+	padding:0px;
+}
+.profileMinister ul {
+	padding:0px;
+	margin-top: 8px;
+	margin-right: 0px;
+	margin-bottom: 5px;
+	margin-left: 0px;
+}
+.profileMinister ul li {
+	background-image:url(../Images/profilebgmin.gif);
+	background-repeat:no-repeat;
+	background-position:left top;
+	width:227px;
+	height:77px;
+	list-style-type:none;
+	margin-bottom:5px;
+}
+.profileMinister ul li img {
+	margin-left:8px;
+	margin-top:8px; 
+	margin-right:5px;
+	float:left;
+}
+.profileMinister ul li span {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #000000;
+	text-decoration: none;
+	margin-top: 8px;
+	margin-right: 2px;
+	margin-bottom: 4px;
+	padding-top:10px;
+	line-height:15px;
+}
+.RTIpanel {
+	float:left;
+	width:225px;
+}
+ .photogallery ul {
+	margin:0px;
+	padding:0px;
+	list-style:none;
+	}
+	
+.photogallery ul li {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	line-height: 18px;
+	font-weight: normal;
+	color: #000;
+	text-decoration: none;
+	background-color: #EEE;
+	float: left;
+	width: 211px;
+	margin-right: 9px;
+	display:block;
+	padding-top: 4px;
+	padding-right: 3px;
+	padding-bottom: 3px;
+	padding-left: 3px;
+	border: 1px solid #CECECE;
+	margin-bottom: 9px;
+	display:block;
+	}
+	
+.photogallery ul li a {
+	border: 1px solid #FFF;
+	}
+	
+ul.menu {
+	padding:0px;
+	margin:0px;
+	
+}	
+ul li{
+	list-style-type: none;	
+	}
+ul li a.slideheader,ul li .slideheader1,ul li a.slideheader2,ul li a.slideheader3,ul li a.slideheader4,ul li a.slideheader5,ul li a.slideheader6,ul li a.slideheader7{
+	font-family: "Century Gothic";
+	font-size: 15px;
+	font-weight: bold;
+	color: #000;
+	text-decoration: none;
+	background-image: url(../Images/YellowBG.jpg);
+	background-repeat: no-repeat;
+	background-position: left top;
+	padding-top: 10px;
+	padding-Bottom: 0px;
+	padding-left: 10px;
+	margin:0px;
+	height:31px;
+	display:block;
+	margin-top:5px;
+	}
+ul.menu li ul {
+	background-image:url(../Images/GreenBottomBg.jpg);
+	background-repeat:no-repeat;
+	background-position: left bottom;
+	padding-bottom:15px;
+	padding-left:0px;
+	padding-right:0px;
+	width: 225px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 1px;
+}
+/*ul.menu li img {
+	padding:0px;
+	margin-top: -5px;
+}*/
+ul.menu li ul li {
+	margin:0px;
+	background-image: url(../Images/GreenMiddleBG.jpg);
+	background-repeat: repeat-y;
+	background-position: left top;
+	list-style-type: none;
+}
+UL.menu li ul li a {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	color: #000;
+	text-decoration: none;
+	background-image: url(../Images/GreenCircle.jpg);
+	padding-left: 20px;
+	background-repeat: no-repeat;
+	background-position: 5px 12px;
+	width:204px;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-top-color: #FFF;
+	border-bottom-color: #e5edc7;
+	display:block;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+UL.menu li ul li a:hover {
+	color: #73a618;
+	text-decoration: none;
+}
+.videoThumb {
+	float:right;
+	width:210px;
+	padding:10px;
+	height:325px;
+	background-color:#F1F1F1;
+	border: 1px solid #CCCCCC;
+}
+.videoThumb ul {
+	margin:0px;
+	padding:0px;
+}
+.videoThumb ul li {
+	list-style-type:none;
+	padding:5px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	color: #000000;
+	text-decoration: none;
+	display:block;
+	clear:both;
+}
+.videoThumb ul li img {
+	float:left;
+	margin-right:5px;
+}
+.videoThumb ul li strong {
+	font-weight:bold;
+	color:#003366;
+	text-decoration:none;
+	line-height:22px;
+}
+.videoThumb2 span{ /*CSS for enlarged image*/
+	position: absolute;
+	background-color: #ffcc99;
+	padding: 2px;
+	left: -1000px;
+	border: 1px dashed gray;
+	/*visibility: hidden;*/
+	color: black;
+	text-decoration: none;
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.videoThumb2 span img{ /*CSS for enlarged image*/
+border-width: 0;
+padding: 2px;
+}
+
+
+.videoThumb2:hover span{ /*CSS for enlarged image*/
+visibility: visible;
+top: 0;
+left: 30px; /*position where enlarged image should offset horizontally */
+z-index: 50;
+}
+.VideoMore2 {
+	width:460px;
+	margin:auto;
+	background-image: url(../Images/MidBgShowcase.gif);
+	background-repeat: repeat-y;
+	background-position:left top;
+	padding:3px;
+	
+}
+.slider {
+	margin:0px;
+	padding:5px;
+	border: 3px solid #89926c;
+}
+.slider ul {
+	margin:0px;
+	padding:5px;
+}
+.slider ul li {
+	float:left;
+	padding-left:5px;
+}
+.slider ul li img {
+	margin-right:10px;
+	width:80px;
+	height:60px;
+	border: 1px solid #a6ad8e;
+	
+}
+.caption{
+	width:675px;
+	margin-left:233px;
+	margin-top:10px;
+
+}
+
+.ltrbg {
+	background-image: url(../Images/ltrbg.gif);
+	background-repeat: no-repeat;
+	background-position: left top;
+	height: 47px;
+	margin-top:5px;
+	font-size: 12px;
+	font-weight: bold;
+	padding-top: 5px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	}
+	
+.ltrbg a {
+	color:#c50000;
+	text-decoration:none;
+	}
+	
+.ltrbg a:hover {
+	color:#000;
+	}
+	
+.vmore {
+	color: #FFF;
+	background-color: #242424;
+	text-align: right;
+	margin-right: 4px;
+	padding-right: 5px;
+	padding-left: 5px;
+	}
+	
+.vmore a {
+	color: #fcda41;
+	}
+	
+.vmore a:hover {
+	text-decoration:none;}
+    .ddsmoothmenuv {
+	margin:0px;
+	padding:0px;
+}
+.ddsmoothmenuv ul{
+	padding: 0;
+	width: 100%; /* Main Menu Item widths */
+	list-style-type: none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	font-variant: normal;
+	margin:0px;
+}
+ 
+.ddsmoothmenuv ul li{
+position: relative;
+}
+
+/* Top level menu links style */
+.ddsmoothmenuv ul li a{
+	display: block;
+	overflow: auto; /*force hasLayout in IE7 */
+	color: #000000;
+	text-decoration: none;
+	background-image: url(../Images/GreenSquareIcon.gif);
+	background-repeat:no-repeat;
+	background-position: 5px 10px;
+	padding-left: 20px;
+	background-repeat: no-repeat;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-top-color: #FFF;
+	border-bottom-color: #e5edc7;
+}
+
+.ddsmoothmenuv ul li a:link, .ddsmoothmenuv ul li a:visited, .ddsmoothmenuv ul li a:active{
+ /*background of menu items (default state)*/
+
+}
+
+
+.ddsmoothmenuv ul li a.selected{ /*CSS class that's dynamically added to the currently active menu items' LI A element*/
+background: #3e540b; 
+color: #fff;
+}
+
+.ddsmoothmenuv ul li a:hover{
+	color: #fff;
+	background-color: #3e540b;
+	background-image: url(../Images/GreenSquareIconhover.gif);
+	background-repeat: no-repeat;
+	background-position: 5px 10px;
+}
+
+/*Sub level menu items */
+.ddsmoothmenuv ul li ul{
+position: absolute;
+width: 100%; /*Sub Menu Items width */
+top: 0;
+font-weight: normal;
+visibility: hidden;
+background: #3e540b;
+color:#000;
+margin-top:1px;
+}
+
+.ddsmoothmenuv ul li ul li a {
+	color: #FFF;
+	background-image: none;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #749C14;
+	border-top-width: 0px;
+	padding-left:10px;
+	
+	}
+
+.ddsmoothmenuv ul li ul li a:hover {
+	background-color: #729c11;
+	background-image:none;
+	}
+	
+
+
+ 
+/* Holly Hack for IE \*/
+* html .ddsmoothmenuv ul li { float: left; height: 1%; }
+* html .ddsmoothmenuv ul li a {
+	height: 1%;
+	color: #000;
+}
+/* End *//* CSS Document */
+
+.ddsmoothmenu{
+width: 966px;
+font-size:11px;
+margin:0px 10px;
+}
+
+.ddsmoothmenu ul{
+z-index:100;
+margin: 0px;
+padding: 0;
+list-style-type: none;
+}
+
+/*Top level list items*/
+.ddsmoothmenu ul li{
+position: relative;
+display: inline;
+float: left;
+padding:2px 0px 0px 0px;
+margin:3px 5px 0px 0px;
+}
+
+/*Top level menu link items style*/
+.ddsmoothmenu ul li a{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	display: block;
+	font-weight: normal;
+	border-right: 1px solid #fff;
+	text-decoration: none;
+	color:#fff;
+	padding-top: 0px;
+	padding-right: 47px;
+	padding-bottom: 3px;
+	padding-left: 25px;
+	margin:0px;
+	
+}
+.ddsmoothmenu ul li span a{
+	text-decoration: none;
+	color:#000;
+	height: 20px;
+	display: block;
+	text-align: center;
+	font-weight:bold;
+	font-size:13px;
+	background-color: #ffd800;
+	-moz-border-radius:3px 3px 0px 0px; 
+	-webkit-border-radius:3px 3px 0px 0px;
+	border-radius:3px 3px 0px 0px;
+	padding-bottom:7px;
+	padding-top:3px;
+	padding-left:34px;
+	padding-right:38px;
+}
+.ddsmoothmenu ul li span a:hover{
+	text-decoration: none;
+	color:#000;
+	height: 20px;
+	display: block;
+	text-align: center;
+	background-color: #efcd46;
+	-moz-border-radius:3px 3px 0px 0px; 
+	-webkit-border-radius:3px 3px 0px 0px;
+	border-radius:3px 3px 0px 0px;
+	padding-bottom:7px;
+	padding-top:3px;
+	padding-left:34px;
+	padding-right:38px;
+	
+}
+
+* html .ddsmoothmenu ul li a{ /*IE6 hack to get sub menu links to behave correctly*/
+	display: inline-block;	
+}
+
+.ddsmoothmenu ul li a:link, .ddsmoothmenu ul li a:visited{
+/*color: white;*/
+}
+
+.ddsmoothmenu ul li a.selected{ /*CSS class that's dynamically added to the currently active menu items' LI A element*/
+background: #fff; /*background of menu items during onmouseover (hover state)*/
+	color: black;
+	-moz-border-radius:3px 3px 0px 0px; 
+	-webkit-border-radius:3px 3px 0px 0px;
+	border-radius:3px 3px 0px 0px;
+	padding-bottom:7px;
+	padding-top:3px;
+	padding-left:25px;
+}
+
+.ddsmoothmenu ul li a:hover{
+background: #fff; /*background of menu items during onmouseover (hover state)*/
+	color: black;
+	-moz-border-radius:3px 3px 0px 0px; 
+	-webkit-border-radius:3px 3px 0px 0px;
+	border-radius:3px 3px 0px 0px;
+	padding-bottom:7px;
+	padding-top:3px;
+	padding-left:25px;
+}
+
+.ddsmoothmenu ul li a.actives{
+	background: #fff; /*background of menu items during onmouseover (hover state)*/
+	color: black;
+	-moz-border-radius:3px 3px 0px 0px; 
+	-webkit-border-radius:3px 3px 0px 0px;
+	border-radius:3px 3px 0px 0px;
+	padding-bottom:7px;
+	padding-top:3px;
+	padding-left:25px;
+}
+	
+/*1st sub level menu*/
+.ddsmoothmenu ul li ul{
+	position: absolute;
+	left: 0;
+	display: none; /*collapse all sub menus to begin with*/
+	visibility: hidden;
+	background-color:#fff;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+	border-bottom-color: #771e1e;
+	
+}
+
+/*Sub level menu list items (undo style from Top level List Items)*/
+.ddsmoothmenu ul li ul li{
+display: list-item;
+float: none;
+margin:3px 5px 0px 0px;
+
+}
+
+/*All subsequent sub menu levels vertical offset after 1st level sub menu */
+.ddsmoothmenu ul li ul li ul{
+top: 0;
+}
+
+/* Sub level menu links style */
+.ddsmoothmenu ul li ul li a{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	display: block;
+	font-weight: normal;
+	width: 150px;
+	margin: 0px 0px 0px 10px;
+	border-top-width: 0;
+	border-bottom: 1px dotted #771e1e;
+	color:#771e1e;
+	background: url(../Images/arw_red.gif) no-repeat 5px center;
+	padding-left:15px;
+	padding-top: 6px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+}
+.ddsmoothmenu ul li ul li a:hover{
+	background-color:#FFF;
+	background: url(../Images/arw_red.gif) no-repeat 5px center;
+	padding-left:15px;
+	padding-top: 6px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	color: #9b3535;
+	text-decoration: underline;
+	}
+/* Holly Hack for IE \*/
+* html .ddsmoothmenu{height: 1%;} /*Holly Hack for IE7 and below*/
+/* ######### CSS classes applied to down and right arrow images  ######### */
+.downarrowclass{
+position: absolute;
+top: 12px;
+right: 10px;
+}
+
+
+/* ######### CSS for shadow added to sub menus  ######### */
+
+.ddshadow{
+	position: absolute;
+	top: 0;
+	width: 0;
+	height: 0;
+	z-index:10;
+	background-color: #F0F0F0;
+}
+
+.toplevelshadow{ /*shadow opacity. Doesn't work in IE*/
+opacity: 1.90;
+}
+
+.mnpd {
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	}
+#topRight {
+	float:right;
+	background-image: url(../Images/Nabeenpatnaik1.jpg);
+	background-repeat: no-repeat;
+	background-position: right bottom;
+	height:101px;
+}
+
+
+.TopLinknew a {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-decoration: none;
+	background-image: url(../Images/tabtop.gif);
+	
+	background-repeat: no-repeat;
+	background-position: left top;
+	text-align: center;
+	display: block;
+	float: left;
+	height: 26px;
+	width: 133px;
+	margin-right: 3px;
+}
+
+.TopLinknew a.current {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-decoration: none;
+	background-image: url(../Images/tabtop.gif);
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	text-align: center;
+	display: block;
+	float: left;
+	height: 26px;
+	width: 133px;
+	margin-right: 3px;
+}
+
+
+.TopLinknew a:hover {
+	
+	background-position: left bottom;
+	
+}
+.TopLinknewst a {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-decoration: none;
+	background-image: url(../Images/tabtop.gif);
+	background-repeat: no-repeat;
+	background-position: left top;
+	text-align: center;
+	display: block;
+	float: right;
+	height: 26px;
+	width: 133px;
+	margin-right: 3px;
+}
+
+.TopLinknewst a.current {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-decoration: none;
+	background-image: url(../Images/tabtop.gif);
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	text-align: center;
+	display: block;
+	float: right;
+	height: 26px;
+	width: 133px;
+	margin-right: 3px;
+}
+
+
+.TopLinknewst a:hover {
+	
+	background-position: left bottom;
+	
+}
+
+
+
+.TopLink {
+	
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	text-decoration: none;
+	height:18px;
+	margin-top:4px;
+	margin-bottom:0px;
+	color:#000;
+	text-align:right;
+	padding:0px;
+}
+.TopLink a {
+	text-decoration: none;
+	color: #000;
+	padding-left:5px;
+	padding-right:5px;
+	font-size:11px;
+	margin:0px;
+	padding:0px;
+}
+.TopLink a:hover {
+	text-decoration: underline;
+	
+}
+#topRight .profile {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #000000;
+	text-decoration: none;
+	float:right;
+	line-height:17px;
+	width:185px;
+}
+
+#topRight .profile .Search {
+	float:left;
+	margin-top:29px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	color: #000;
+	text-decoration: none;
+	background-color: #fef5d6;
+	border: 2px solid #cba224;
+	height:20px;
+}
+#topRight .profile .button {
+	float:left;
+	margin-top:27px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	color: #FFF;
+	text-decoration: none;
+	background-image: url(../Images/searchBG.jpg);
+	background-repeat: no-repeat;
+	background-position: left top;
+	height: 27px;
+	width: 59px;
+	border:0px;
+}
+
+</style>
+
+    <body>
+        <!-- Top & Midle Area Start-->
+            
+            <div id="mainarea">
+              <link href="../style/ddsmoothmenu.css" rel="stylesheet" type="text/css">
+        <link href="../style/ddsmoothmenu-v_geoology.css" rel="stylesheet" type="text/css">
+            
+            <script type="text/javascript" src="../Scripts/ddsmoothmenu.js"></script>
+            <script type="text/javascript">
+        
+        ddsmoothmenu.init({
+                mainmenuid: "smoothmenu1", //menu DIV id
+                orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+                classname: 'ddsmoothmenu', //class added to menu's outer DIV
+                //customtheme: ["#1c5a80", "#18374a"],
+                contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+            })
+        
+        ddsmoothmenu.init({
+            mainmenuid: "smoothmenu2", //Menu DIV id
+            orientation: 'v', //Horizontal or vertical menu: Set to "h" or "v"
+            classname: 'ddsmoothmenuv', //class added to menu's outer DIV
+            //customtheme: ["#804000", "#482400"],
+            contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+        })
+        
+        </script>
+        
+        
+        <!--Header Area Start-->
+                    <div id="Innerheader">
+                        <div id="topRight" style="width:450px;">
+                            <div class="TopLinknewst">
+                                    <a href="https://omcltd.in" target="_blank" class="noIcon">Odisha Mining Corp.</a> 
+                                     <a href="https://www.odishaminerals.gov.in/sites/Mines/Default.aspx?GL=Ghome">Directorate of Mines</a>
+                                    <a href="https://www.odishaminerals.gov.in">Dept. of Steel &amp; Mines</a>  
+                              </div>
+                            <!--<div class="TopLink">
+                                 <a href="#">Feedback</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                             <a href="Contact.aspx?GL=Contact">Contact Us</a> &nbsp;&nbsp;</div> -->
+                        
+                        
+                          <!--<div class="profile" style="margin-top:5px;">
+                                <input name="txtSearch" type="text" value="" class="Search"/><input name="btnSearch" type="button" class="button" value="Search" />
+                        </div> -->
+                          
+                        </div>
+                            <div class="topImage"><img src="images/header2.png" width="943" height="100" alt="Directorate of Geology "style="margin-top:-300px; margin-bottom:20px"> </div>
+                </div>
+                <!-- Header Area End-->
+                
+              <div class="greenline"></div>
+                    
+                
+              <div class="clear"></div>
+                        <div id="whiteBg">
+                            <div id="contArea">
+                                <!-- Left Panel start-->
+                            
+        
+        <link rel="stylesheet" type="text/css" href="../style/ddsmoothmenu-v_geoology.css">
+        
+        
+        <script type="text/javascript" src="../Scripts/ddsmoothmenu.js"></script>
+        
+        <script type="text/javascript">
+        
+        ddsmoothmenu.init({
+                mainmenuid: "smoothmenu1", //menu DIV id
+                orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+                classname: 'ddsmoothmenu', //class added to menu's outer DIV
+                //customtheme: ["#1c5a80", "#18374a"],
+                contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+            })
+        
+        ddsmoothmenu.init({
+            mainmenuid: "smoothmenu2", //Menu DIV id
+            orientation: 'v', //Horizontal or vertical menu: Set to "h" or "v"
+            classname: 'ddsmoothmenuv', //class added to menu's outer DIV
+            //customtheme: ["#804000", "#482400"],
+            contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+        })
+        
+        </script>
+        
+        <!-- Left Panel start-->
+        <div id="LeftPanel">
+        <!-- Odisha Mines Profile Box-->
+            <div><img src="../Images/ltgreentop.gif" width="226" height="7"></div>
+                <div class="GrayBox" style="margin-top:0px;">
+                    <div class="geomenu" style="padding-top:0px; padding-bottom:px;">
+                        <div id="smoothmenu2" class="ddsmoothmenuv">
+                            <ul>
+                                <li><a href="home.php" style="border-top:none;">Home </a></li>
+                                <li><a href="aboutus.html">About us</a></li>
+                                <li><a href="services.html">Services &nbsp; </a>
+ 								  
+									<li><a href="listofmines.html">List of Mines</a></li>
+									<li><a href="mineral_despatch.html">Mineral Despatch</a></li>
+									<li><a href="mineral_catalog.html">Mineral Catalog</a></li>
+									<li><a href="mineral_production.html">Mineral Production</a></li>
+
+
+                                 <li><a href="#">Personnel &nbsp; </a>
+                                    <ul>
+                                        <li><a href="Officers_Geology.aspx?GL=Personnel&amp;PL=1">Officers</a></li>
+                                        <li><a href="Staff_Geology.aspx?GL=Personnel&amp;PL=2">Staff</a></li> 
+                                        <!--<li><a href="http://www.ogsa.in/Members.htm" target="_blank">Officers</a></li> -->
+                                    </ul>
+                                </li>
+                                  
+                                <li><a href="images/RTI ACT.pdf">Right to Information</a></li>
+
+								<li><a href="directorate.html">Directorate of Mines</a></li>
+
+                                <!--<li><a href="Tender.aspx?GL=Tender">Tender <img src="../Images/new.gif" alt="Click here to view new Tenders" align="absmiddle" border="0" /></a></li>-->
+                            </ul>
+                        </div>
+                    </div>                                
+                </div>
+            <div><img src="../Images/ltgreenbot.gif" width="226" height="7"></div>
+        </div>
+        <!-- Left Panel End-->                            
+                            <!-- Left Panel End-->
+                            <!-- Right Panel start-->
+                            <div id="RightPanel">
+                            <!-- Banner Box Start --> 
+                            <img src="images/banner.jpg" width="446" height="347" id="dept">
+                            <!-- Banner Box End -->
+                            <!-- News & Notices Box Start -->
+                            <div id="news">
+                                <div class="NewsBox">
+                                    <div class="header">
+                                        <div style="float:left;">Overview</div><a href="GeologyOverview.aspx?GL=Overview"></a>
+                                    </div>
+                                    <div class="NewsBg" style="padding-bottom:5px; height:294px;">
+                                    The Directorate of Geology undertakes systematic geological survey and exploration of minerals/ore for augmentation of state’s mineral resources  which are essential for rapid development of mineral based industries of the state. The Directorate of Geology emerged as a separate entity after the bifurcation of the erstwhile Directorate of Mining and Geology during 1997. The  Directorate of Mining and Geology was originally created as Director of Mines in 1955. 
+                                    </div><!--<img src="../Images/NewsBottomBg.jpg" width="239" height="14" /> -->
+                                </div>
+                                
+                            </div>
+                            <!-- News & Notices Box End -->
+                            
+                            </div>
+                            <!-- Right Panel End-->
+                                 <div style="margin-top:10px;"><img src="../Images/greypantopnew.jpg" width="930" height="7"></div>
+                                      <div class="grayPanelmid1">
+                                          <div class="panelgeo1">
+                                            <h1 style="padding-bottom:5px;">Survey and Exploration of Mineral Deposits</h1>	
+                                                    <div style="padding-bottom:25px;">	
+                                                        The Directorate of Geology undertakes various mineral exploration programmes as per field guidelines of UNFC and as finalized in the State Geological Programming Board for major minerals  like iron ore, manganese, chromite, bauxite, basemetal,  limestone, graphite, coal, gemstone and minor minerals like dolomite, china clay, pyrophyllite, decorative stones, quartz and quartzite etc in the state..
+        For details contact :<strong> Sri P C Mishra, JDG on 9861465695 </strong> during office hours
+                                            </div>
+                                <a href="Drilling_Geology.aspx?GL=facilities&amp;PL=2" class="more"> </a>
+                </div>
+                                           
+                                        <div class="panelgeo1">
+                                                <h1 style="padding-bottom:5px;">Gem Testing</h1>
+            <div style="padding-bottom:5px;">							  
+            Get your gemstones tested in the gem laboratory of the Directorate of Geology managed by trained experts. Our certificates on gem characterization and identification are recognized everywhere. For details contact <strong> Sri P K Chand, JDG on 9439755222 </strong> during office hrs. </div>
+            <a href="Gem_Testing_Geology.aspx?GL=facilities&amp;PL=3" class="more"> </a>	</div>    
+                                          
+                                           
+                                                                  
+                                         
+                                            <div class="panelgeo1" style="margin-right:0px; padding-right:0px; border-right:0px;">
+             <h1 style="padding-bottom:5px;">Remote Sensing</h1>
+             <div style="padding-bottom:25px;">	
+            
+        The Remote Sensing Cell of the Directorate well equipped with many-fold potentiality generates  additional information for geological exploration.
+        For details contact <strong> Sri J P Behera, JDG on 9861132669 </strong> during office hrs. </div>
+            <a href="Remote_Sensing_Geology.aspx?GL=facilities&amp;PL=6" class="more"> </a>	</div>
+                                      </div>
+                                      <div style="margin-top:10px;"><img src="../Images/greenpantop.gif"></div>
+                                      <div class="grayPanelmid">
+                                       
+                                   <div class="panelgeo">
+                                <h1 style="padding-bottom:5px;">
+                                  High Resolution Airborne Geophysical Data</h1>							   
+                                <div style="padding-bottom:15px;">Procure magnetic, radiometric  and DEM data, images and contours for interpretation of subsurface geology from the Data Processing Centre.
+                                  Call <span style="padding-bottom:25px;"><strong>Sri J P Behera,</strong> JDG on</span> <strong>9861132669</strong> for purchase of digital data/ maps, images and a host of other services.</div>
+                                <a href="Overview_Geology.aspx?GL=aeromag&amp;PL=1" class="more"> </a>
+                                </div>
+                                       
+                                       <div class="panelgeo">
+                                        <h1 style="padding-bottom:5px;">Ore Dressing and Mineral Processing</h1>						  
+                                        <div style="padding-bottom:15px;">The Ore Dressing Laboratory undertakes processing of ores, minerals, Diamond Indicator Mineral (DIM) samples (gravel, loam and bulk concentrate)
+                                         and beach sand samples. Contact <span style="padding-bottom:25px;"><strong>Sri P K Chand,</strong> JDG on</span> <strong>9439755222</strong></div>
+                                        <a href="Dressing_Mineral_Geology.aspx?GL=facilities&amp;PL=7" class="more"> </a>
+                                        </div>    
+                                      
+                                       
+                                       <div class="panelgeo">
+                                       <h1 style="padding-bottom:15px; padding-top:10px;"> Granite Cutting and Polishing</h1>
+                                       <div style="padding-bottom:35px;">We undertake cutting and polishing of dimension and decorative stone samples to ascertain quality. For commercial cutting and polishing work contact <span style="padding-bottom:25px;"><strong>Sri P K Chand, </strong> JDG on</span> <strong>9439755222</strong></div>
+                                       <a href="Granite_Geology.aspx?GL=facilities&amp;PL=9" class="more"> </a>
+                                       </div> 							     
+                                     
+                                <div class="panelgeo" style="margin-right:0px; padding-right:0px; border-right:0px;">
+                                 <h1 style="padding-bottom:5px;">Petrological Analysis of rock &amp; ore samples</h1>
+                                <div style="padding-bottom:15px;">The Petrology Lab is manned by trained &amp; experienced Petrologists.  It is well equipped to take up commercial thin 
+                                section study of rock samples, ore microscopic study, beach sand study, DIM scanning.  Contact <strong>Sri P K Chand,</strong> JDG on  <strong>9439755222</strong>
+                                </div>
+                                 <a href="Petrological_Analysis_Geology.aspx?GL=facilities&amp;PL=4" class="more"> </a>
+                                </div>
+                                        
+                                      
+                                         <div class="clear"></div>
+                                        
+                                       
+                              </div>
+                                        <div><img src="../Images/greenpanbot.gif"></div>
+                                      
+                                      
+          <div style="float:left; margin-right:10px; width:692px;">                            
+         
+                                  
+          <div style="margin-top:10px;"><img src="../Images/greybgtop.gif" width="692" height="10"></div>
+                <div class="greybgmid">
+                                  
+                                   <strong>Exploration Reports</strong> on a number of mineral deposits of the state are available on sale.  <br>
+                                   
+                                   <div style="height:5px;"><a href="SellingReportt_Geology.aspx?GL=facilities&amp;PL=10" class="more"> </a></div>
+                  Please call <strong>Mr P C Mishra</strong>, JDG on <strong>+91 9861765695</strong> for details of procedure.</div>
+                   
+                              <div><img src="../Images/greybgbot.gif" width="692" height="10"></div>
+         </div>
+         
+         <div style="float:left; width:228px;">
+        <div class="YellowBox" style="margin-top:8px;">
+                                             <div class="header">
+                                             <div style="float:left;">Photo Gallery</div>
+                                             <a href="GeoPGallery.aspx?GL=GPhGal" class="yelarrow"></a>
+                                             </div>
+                                        <div class="yellowBg">
+                                        <img src="../Images/GeoPgal.jpg" width="210" height="100" alt="Play Video"><br>&nbsp;
+        </div>
+                                     <div>   <img src="../Images/YellowBottomBg.jpg" width="227" height="14"></div>
+                                </div>
+         </div>
+         <div class="clear"></div>
+                                      
+                          </div>
+                        </div>
+        </div>
+        
+        <!-- Top & Midle Area End-->
+        
+        <!-- Footer Area Start-->
+        <div id="footerArea">
+            <div class="Footer">
+                <div style="float:left; margin-top:15px;">
+             <a href="Publication.aspx?GL=publication">Publication</a> &nbsp;|&nbsp; <a href="Feedback.aspx?GL=feedback">Feedback</a> &nbsp;|&nbsp;   <a href="Contact.aspx?GL=Contact">Contact Us</a>&nbsp;
+        <div style="margin-top:5px;">Copyright © 2024  Directorate of Geology. All rights reserved. </div>
+              </div>
+                    
+                <!--<div style="float:right; margin-top:2px;" align="center" >Powered by<br /><a href="http://www.csmpl.com" target="_blank"  class="noIcon"><img src="../Images/CSM_Logo.jpg" border="0" alt="CSM Technologies, IT Company, Bhubaneswar" /></a></div>-->
+            </div>
+        </div>
+        <!-- Footer Area End-->
+        
+        
+        
+        
+        </body>

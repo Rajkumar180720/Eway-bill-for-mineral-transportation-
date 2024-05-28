@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Notification Example</title>
+</head>
+<body>
+
+<!-- Notification button -->
+<button onclick="sendNotification()">Send Notification</button>
+
+<!-- File input for receiving files -->
+<input type="file" id="fileInput" style="display:none" onchange="handleFile(this.files)">
+
+<script>
+    function sendNotification() {
+        // Check if the browser supports notifications
+        if ('Notification' in window) {
+            Notification.requestPermission().then(function (permission) {
+                if (permission === "granted") {
+                    // Create and show a notification
+                    var notification = new Notification('File Notification', {
+                        body: 'You have a file!',
+                    });
+
+                    // Show file input after clicking on the notification
+                    notification.onclick = function () {
+                        document.getElementById('fileInput').click();
+                    };
+                }
+            });
+        }
+    }
+
+    function handleFile(files) {
+        // Assuming you want to handle the received file here
+        var receivedFile = files[0];
+        console.log('Received File:', receivedFile);
+
+        // You can perform further actions with the received file, e.g., upload it to a server
+    }
+</script>
+
+</body>
+</html>

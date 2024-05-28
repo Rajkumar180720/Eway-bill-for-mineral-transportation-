@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/logo.jpg" type="image/jpg">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        .top-bar {
+            background-color: #00796b;
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .left-links, .right-links {
+            display: flex;
+            align-items: center;
+        }
+
+        .right-links {
+            margin-left: auto;
+        }
+
+        .left-links a,
+        .right-links a,
+        .dropdown span,
+        .search-box {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        .search-box input[type="text"] {
+            padding: 8px;
+            border: none; /* Removed border property */
+            border-radius: 3px;
+            margin-right: 5px;
+        }
+
+        .search-icon {
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            z-index: 1;
+            border: 1px solid #fff;
+            border-radius: 5px;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            border: none;
+            border-radius: 0;
+        }
+
+        .lang-item-ta a {
+            color: black;
+        }
+
+        .container1 {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 10px;
+            background-color: #ccc4c4;
+        }
+
+        .wrapper {
+            overflow: hidden;
+        }
+
+        .header-wrapper {
+            background-color: #ccc4c4;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .header-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .logo {
+            margin-bottom: 20px;
+        }
+
+        .site_logo {
+            max-height: 80px;
+        }
+
+        .logo-text {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .site_name_regional,
+        .site_name_english {
+            display: block;
+            color: #333;
+        }
+
+        .site_name_regional {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .site_name_english {
+            font-size: 1.2em;
+        }
+
+        .menu {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+        }
+
+        .menu a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .menu a:hover {
+            color: #00bcd4;
+        }
+
+        .innerBanner img {
+            width: 100%;
+            height: auto;
+        }
+
+        .dpt {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .breadcrumbs {
+            list-style: none;
+            padding: 10px;
+            background-color: #eee;
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .breadcrumbs li {
+            display: inline;
+            margin-right: 5px;
+            font-size: 0.9em;
+        }
+
+        .breadcrumbs a {
+            text-decoration: none;
+            color: #00796b;
+        }
+
+        .breadcrumbs a:hover {
+            text-decoration: underline;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        table.bt {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        table.bt caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        table.bt th, table.bt td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        table.bt th {
+            background-color: #00796b;
+            color: #fff;
+        }
+
+        table.bt tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        table.bt tbody tr:hover {
+            background-color: #ddd;
+        }
+
+        .pdf-downloads a {
+            color: #00796b;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .pdf-downloads a:hover {
+            text-decoration: underline;
+        }
+
+        .pdf-icon {
+            font-size: 24px;
+            color: #f44336;
+            margin-right: 5px;
+        }
+
+        .pdf-download {
+            font-size: 20px;
+            color: #4caf50;
+            margin-right: 5px;
+        }
+
+        .share {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        .share a {
+            margin-left: 15px;
+            color: #00796b;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            transition: color 0.3s;
+        }
+
+        .share a:hover {
+            color: #00bcd4;
+        }
+
+        .fab {
+            margin-right: 5px;
+        }
+    </style>  
+
+</head>
+<body>
+
+    <div class="top-bar">
+        <div class="left-links">
+            <a href="#">தமிழ்நாடு அரசு</a>
+            <a href="#">Government of Tamil Nadu</a>
+        </div>
+
+        <div class="right-links">
+            <div class="dropdown">
+                <span>English</span>
+                <div class="dropdown-content">
+                    <a href="#" onclick="changeLanguage('tamil')" class="lang-item-ta">தமிழ்</a>
+                </div>
+            </div>
+
+            <div class="search-box">
+                <input type="text" placeholder="Search...">
+                <span class="search-icon">&#128269;</span>
+            </div>
+
+            <a href="#main-content">SKIP TO MAIN CONTENT</a>
+        </div>
+    </div>
+    
+    <div class="header-wrapper">
+        <div class="header-container">
+            <img src="images/theni.png" style="width:1520px; "> 
+        </div>
+    </div>
+                
+                <div class="header-right clearfix">
+                    <div class="right-content clearfix">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="menu">
+        <a href="mineral_catalog.html">Mining Catalog</a>
+        <a href="mineral_production.html">Mineral Production</a>
+        <a href="pdf/mineral_despatch.pdf">Mineral Despatch</a>
+        <a href="#">Personnel</a>
+         <a href="pdf/RTI ACT.pdf">Right to Information</a>
+    </div> 
+
+    <div class="wrapper banner-wrapper innerBanner">
+        <img
+            src="https://cdn.s3waas.gov.in/s39a96876e2f8f3dc4f3cf45f02c61c0c1/uploads/2018/04/2018040937.jpg"
+            alt="">
+    </div>
+    <div class="dpt">
+        <ul class="breadcrumbs">
+            <li><a href="https://theni.nic.in/" class="home"><span>Home</span></a></li>
+            <li class="current">/ Department of Geology and Mining District Survey Report</li>
+        </ul>
+        
+        <div class="share">
+            <div class="share-text">
+                <em class="icon-share"></em>
+                <span class="off-css">Share</span>
+            </div>
+            <ul>
+                <li>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://theni.nic.in/document/department-of-geology-and-mining-district-survey-report/&amp;t=Department+of+Geology+and+Mining+District+Survey+Report"
+                        onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"
+                        target="_blank" title="Share on Facebook"
+                        aria-label="Facebook that opens in a new window" rel="noopener noreferrer">
+                        <i class="fab fa-facebook"></i><span class="off-css">Facebook</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/share?url=https://theni.nic.in/document/department-of-geology-and-mining-district-survey-report/&amp;via=TWITTER_HANDLE&amp;text=Department+of+Geology+and+Mining+District+Survey+Report"
+                        onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"
+                        target="_blank" title="Share on Twitter"
+                        aria-label="Twitter that opens in a new window" rel="noopener noreferrer">
+                        <i class="fab fa-twitter"></i><span class="off-css">Twitter</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="row" id="row-content">
+            <div class="col-12">
+                <h1>Department of Geology and Mining District Survey Report</h1>
+                <table class="bt">
+                    <thead>
+                        <tr>
+                            <th scope="col">Title</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">View / Download</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-th="Title"><span class="bt-content">Department of Geology and Mining District Survey Report</span></td>
+                            <td data-th="Date"><span class="bt-content">21/03/2019</span></td>
+                            <td data-th="View / Download">
+                                <span class="bt-content pdf-downloads">
+                                    <a target="_blank"
+                                        href="https://cdn.s3waas.gov.in/s39a96876e2f8f3dc4f3cf45f02c61c0c1/uploads/2019/03/2019032159.pdf"
+                                        aria-label="Department of Geology and Mining District Survey Report PDF 7 MB - opens in new window"
+                                        title="Click here to view" rel="noopener noreferrer"> View (7 MB) <span
+                                            class="icon-pdf pdf-icon"></span></a> <a
+                                        href="https://cdn.s3waas.gov.in/s39a96876e2f8f3dc4f3cf45f02c61c0c1/uploads/2019/03/2019032159.pdf"
+                                        download="2019032159.pdf" title="Click here to download"
+                                        class="download" target="_blank" rel="noopener noreferrer"
+                                        aria-label="Download Department of Geology and Mining District Survey Report PDF 7 MB "><i
+                                            class="fa fa-download pdf-download"></i></a>
+                                </span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

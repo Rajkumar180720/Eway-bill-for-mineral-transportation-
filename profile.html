@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+
+
+
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quarry Owner Profile</title>
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Times New Roman', Times, serif
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding-bottom: 20px;
+            
+            
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+            background-color: ivory;
+        }
+
+        h1 {
+            font-size: 32px;
+            color: #0a0a0a;
+            background-color:#dda15e ;
+        }
+
+        .profile-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+ /* CSS */
+.profile-sidebar {
+    flex: 1;
+    min-width: 200px;
+    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Added to align items vertically */
+}
+
+.profile-sidebar img {
+    width: 150px; /* Adjust the width as needed */
+    height: 150px; /* Adjust the height as needed to maintain aspect ratio */
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-sidebar label {
+    cursor: pointer;
+    color: #007bff;
+    text-decoration: underline;
+}
+
+.profile-sidebar label:hover {
+    color: #0056b3;
+}
+
+#profile-pic-input {
+    display: none;
+}
+
+.file {
+    padding-bottom: 100%;
+}
+
+.file input[type="file"] {
+    display: none;
+}
+
+        .profile-content {
+            flex: 3;
+            padding: 20px;
+            background-color: #606c38;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(247, 6, 6, 0.1);
+        }
+
+        .profile-content h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #dda15e;
+            margin-left: 20%;
+        }
+
+        .profile-form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="password"],
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+             ;
+         }
+
+        .form-group textarea {
+            height: 100px;
+            resize: none;
+        }
+
+        .form-group button[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+
+        .form-group button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        .file{
+            padding-bottom: 100%;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #060605;
+        }
+    </style>
+</head>
+<body>
+    
+<?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        // Retrieve form data
+        $full_name = $_POST["full-name"];
+        $email = $_POST["email"];
+        $mobile_no = $_POST["mobile-no"];
+        $username = $_POST["username"];
+        $password = $_POST["password"];
+        $address = $_POST["address"];
+    
+        // Create an associative array with the form data
+        $data = array(
+            "Full Name" => $full_name,
+            "Email" => $email,
+            "Mobile Number" => $mobile_no,
+            "Username" => $username,
+            "Password" => $password,
+            "Address" => $address
+        );
+    
+        // Convert the associative array to JSON format
+        $json_data = json_encode($data, JSON_PRETTY_PRINT);
+    
+        // Write the JSON data to a file
+        $file_name = "profile_data.json";
+        file_put_contents($file_name, $json_data);
+    
+        // Display a success message
+        echo "<p>Data has been saved successfully.</p>";
+    }
+    ?>
+    
+<header>
+    <h1>Quarry Owner Profile</h1>
+</header>
+
+ <div class="container">
+    <aside class="profile-sidebar">
+        <img id="profile-pic" src="#" alt="Profile Picture"><br><br>
+        <input type="file" id="profile-pic-input" accept="image/*" style="display: none;" onchange="displayProfilePicture(event)">
+        <label for="profile-pic-input" style="cursor: pointer;">
+             <span>Select a Profile Picture</span>
+        </label>
+    </aside>
+</div>
+
+    
+    <main class="profile-content">
+        <section>
+            <h2 >Personal Information</h2>
+            <form action="#" method="post" class="profile-form">
+                <div class="form-group">
+                    <label for="full-name" style="color: #edbd93;">Full Name</label>
+                    <input type="text" id="full-name" name="full-name" placeholder="Johndoe" required>
+                </div>
+                <div class="form-group">
+                    <label for="email" style="color: #edbd93;">Email</label>
+                    <input type="email" id="email" name="email" placeholder="john.doe@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="mobile-no" style="color: #edbd93;">Mobile Number</label>
+                    <input type="text" id="mobile-no" name="mobile-no" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="username" style="color: #edbd93;">Username</label>
+                    <input type="text" id="username" name="username" placeholder="johndoe123" required>
+                </div>
+                <div class="form-group">
+                    <label for="password" style="color: #edbd93;">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="address" style="color: #edbd93;">Address</label>
+                    <textarea id="address" name="address"> </textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Save Changes</button>
+                </div>
+            </form>
+        </section>
+    </main>
+</div>
+
+<footer>
+    <p>&copy; 2024 Quarry Owner</p>
+</footer>
+
+<script>
+    function displayProfilePicture(event) {
+        var reader = new FileReader();
+        reader.onload = function() {
+            var output = document.getElementById('profile-pic');
+            output.src = reader.result;
+        };
+        reader.readAsDataURL(event.target.files[0]);
+    }
+</script>
+
+</body>
+<head>
+
+</html>

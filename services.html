@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services</title>
+    <link rel="icon" href="images/logo.jpg" type="image/jpg">
+
+    <!-- Font Awesome CDN-->
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <!-- Google Font -->
+    <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+            rel="stylesheet"
+    />
+    <!-- Stylesheet -->
+     <style>
+        /* Header Styles */
+        header {
+            background-color: #453748;
+            padding: 10px;
+            text-align: center;
+            width: 100%;
+        }
+
+        header img {
+            width: 100px; /* Adjust the width as needed */
+            height: auto; /* Maintain aspect ratio */
+            margin-bottom: 10px; /* Optional: Add margin below the logo */
+            display: block; /* Ensure the logo is displayed as a block element */
+            margin: 0 auto; /* Center the logo horizontally */
+        }
+
+        h1 {
+            color: #453748;
+        }
+
+        h2 {
+            color: rgb(130, 195, 229);
+        }
+
+        nav {
+            padding: 10px;
+            text-align: center;
+            width: 100%;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fcfdfc;
+            display: inline-block;
+            padding: 10px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #e3f571;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav li {
+            display: inline;
+            margin-right: 20px;
+            position: relative;
+        }
+
+        nav .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #514e4e;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            border-radius: 4px;
+            z-index: 1;
+        }
+
+        nav .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        nav .dropdown-menu a {
+            padding: 10px;
+            text-decoration: none;
+            display: block;
+            transition: background-color 0.3s;
+        }
+
+        nav .dropdown-menu a:hover {
+            background-color: rgb(202, 56, 56);
+        }
+
+        /* Footer Styles */
+        footer {
+    background-color: rgb(1, 1, 1);
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    
+    width: 100%;
+  }
+
+  footer p {
+    margin: 0;
+  }
+
+        /* Other Styles */
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        section {
+            padding-bottom: 80px; /* Adjust according to footer height */
+        }
+
+        .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Align items horizontally to the center */
+    align-items: center; /* Align items vertically to the center */
+}
+
+
+        .column {
+            width: 100%;
+            padding: 0 1em 1em 1em;
+            text-align: center;
+        }
+
+        .card {
+            width: 100%;
+            height: 100%;
+            padding: 2em 1.5em;
+            background: linear-gradient(#ffffff 50%, #0e274a
+ 50%);
+            background-size: 100% 200%;
+            background-position: 0 2.5%;
+            border-radius: 5px;
+            box-shadow: 0 0 35px rgba(0, 0, 0, 0.12);
+            cursor: pointer;
+            transition: 0.5s;
+        }
+
+        h3 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1f194c;
+            margin: 1em 0;
+        }
+
+        p {
+            color: #575a7b;
+            font-size: 15px;
+            line-height: 1.6;
+            letter-spacing: 0.03em;
+        }
+
+        .icon-wrapper {
+            background-color: #a2def9;
+            position: relative;
+            margin: auto;
+            font-size: 30px;
+            height: 2.5em;
+            width: 2.5em;
+            color: #ffffff;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            transition: 0.5s;
+        }
+
+        .card:hover {
+            background-position: 0 100%;
+        }
+
+        .card:hover .icon-wrapper {
+            background-color: #ffffff;
+            color: #2c7bfe;
+        }
+
+        .card:hover h3 {
+            color: #ffffff;
+        }
+
+        .card:hover p {
+            color: #f0f0f0;
+        }
+
+        @media screen and (min-width: 768px) {
+            section {
+                padding: 0 2em;
+            }
+            .column {
+                flex: 0 50%;
+                max-width: 50%;
+            }
+        }
+
+        @media screen and (min-width: 992px) {
+            section {
+                padding: 1em 3em;
+            }
+            .column {
+                flex: 0 0 33.33%;
+                max-width: 33.33%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="images/gov.jpg" alt="Government of Tamil Nadu Logo">
+    <h1>Government of Tamil Nadu</h1>
+    <h2>Department of Geology and Mines</h2>
+
+    <nav>
+        <ul>
+            <li><a href="home.php">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li class="dropdown">
+                <a href="" title="Login">Login</a>
+                <ul class="dropdown-menu">
+                    <li><a href="admin_login.php">AD Login</a></li>
+                     <li><a href="user_login.php">Quarry Owner Login</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<section>
+    <div class="row">
+        <h2 class="section-heading">Our Services</h2>
+    </div>
+    <div class="row">
+        <div class="column">
+            <div class="card">
+                <div class="icon-wrapper">
+                    <i class="fas fa-shipping-fast"></i>
+                </div>
+                <h3>Customized Transportation Solutions</h3>
+                <p>
+                    We understand that every client has unique transportation needs. That's why we offer customized transportation solutions tailored to your specific requirements. Whether you need specialized handling or specific delivery schedules, we can accommodate your needs.
+                </p>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <div class="icon-wrapper">
+                    <i class="fas fa-truck-loading"></i>
+                </div>
+                <h3>Transportation of Bulk Minerals</h3>
+                <p>
+                    We specialize in the safe and efficient transportation of bulk minerals, including coal, iron ore, copper, and more. Our fleet of vehicles is equipped to handle large quantities of minerals, ensuring timely delivery to your desired destination
+                </p>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <div class="icon-wrapper">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3>Safe and Secure Transportation</h3>
+                <p>
+                    We prioritize the safety and security of your minerals during transportation. Our experienced drivers and rigorous safety protocols ensure that your minerals are transported with the utmost care and integrity, minimizing the risk of damage or loss
+                </p>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <div class="icon-wrapper">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <h3>Real-time Tracking and Monitoring</h3>
+                <p>
+                    We utilize advanced tracking and monitoring systems to provide real-time updates on the status and location of your shipments. You can track your minerals throughout the transportation process, giving you peace of mind and full visibility into your supply chain
+                </p>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <div class="icon-wrapper">
+                    <i class="fas fa-calendar-alt"></i>
+                </div>
+                <h3>Flexible Scheduling</h3>
+                <p>
+                    We understand that flexibility is essential in today's dynamic business environment. That's why we offer flexible scheduling options to accommodate your changing transportation needs. Whether you need immediate transportation or scheduled deliveries, 
+                </p>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <div class="icon-wrapper">
+                    <i class="fas fa-clipboard-check"></i>
+                </div>
+                <h3>Compliance with Regulations</h3>
+                <p>
+                    We adhere to all relevant regulations and standards governing the transportation of minerals. Our compliance team stays updated on regulatory changes to ensure that your shipments meet all legal requirements, minimizing any potential disruptions or delays
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>Copyright &copy; 2024 Government of Tamil Nadu - Department of Geology and Mines. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
